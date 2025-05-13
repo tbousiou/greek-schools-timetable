@@ -9,6 +9,7 @@ import Home from './pages/Home'
 import ImerisioGimnasio from './pages/ImerisioGimnasio'
 import EsperinoGimnasio from './pages/EsperinoGimnasio'
 import ImerisioGenikoLikio from './pages/ImerisioGenikoLikio'
+import EsperinoGenikoLikio from './pages/EsperinoGenikoLikio'
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
@@ -37,6 +38,7 @@ function App() {
               <Route path="/imerisio-gymnasio" element={<ImerisioGimnasio />} />
               <Route path="/esperino-gymnasio" element={<EsperinoGimnasio />} />
               <Route path="/imerisio-geniko-lykeio" element={<ImerisioGenikoLikio />} />
+              <Route path="/esperino-geniko-lykeio" element={<EsperinoGenikoLikio />} />
               {/* Add more routes here */}
             </Routes>
           </main>
