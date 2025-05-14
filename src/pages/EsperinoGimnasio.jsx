@@ -1,90 +1,150 @@
-import React from 'react'
+import React, { useState } from 'react'
+import ClassTable from '../components/ClassTable';
 
-// Restructured data format
-const subjects = [
-  { name: "Γλωσσική Διδασκαλία", hours: [3, 3, 2] },
-  { name: "Νεοελληνική Λογοτεχνία", hours: [2, 2, 2] },
-  { name: "Αρχαία Ελληνική Γλώσσα", hours: [2, 2, 1] },
-  { name: "Αρχαία Ελληνικά Κείμενα από Μετάφραση", hours: [2, 2, 2] },
+const esperinoGimnasioData = {
+  classA: {
+    subjects: {
+      core: [
+        { name: "Γλωσσική Διδασκαλία", hours: 3 },
+        { name: "Νεοελληνική Λογοτεχνία", hours: 2 },
+        { name: "Αρχαία Ελληνική Γλώσσα", hours: 2 },
+        { name: "Αρχαία Ελληνικά Κείμενα από Μετάφραση", hours: 2 },
+        { name: "Μαθηματικά", hours: 4 },
+        { name: "Φυσική", hours: 1 },
+        { name: "Βιολογία", hours: 1 },
+        { name: "Γεωλογία - Γεωγραφία", hours: 2 },
+        { name: "Ιστορία", hours: 2 },
+        { name: "Θρησκευτικά", hours: 1 },
+        { name: "Αγγλικά", hours: 2 },
+        { name: "Πληροφορική", hours: 1 },
+        { name: "Εργαστήριο Δεξιοτήτων", hours: 1 }
+      ]
+    }
+  },
+  classB: {
+    subjects: {
+      core: [
+        { name: "Γλωσσική Διδασκαλία", hours: 3 },
+        { name: "Νεοελληνική Λογοτεχνία", hours: 2 },
+        { name: "Αρχαία Ελληνική Γλώσσα", hours: 2 },
+        { name: "Αρχαία Ελληνικά Κείμενα από Μετάφραση", hours: 2 },
+        { name: "Μαθηματικά", hours: 4 },
+        { name: "Φυσική", hours: 1 },
+        { name: "Χημεία", hours: 1 },
+        { name: "Βιολογία", hours: 1 },
+        { name: "Γεωλογία - Γεωγραφία", hours: 1 },
+        { name: "Ιστορία", hours: 2 },
+        { name: "Θρησκευτικά", hours: 1 },
+        { name: "Αγγλικά", hours: 2 },
+        { name: "Πληροφορική", hours: 1 },
+        { name: "Εργαστήριο Δεξιοτήτων", hours: 1 }
+      ]
+    }
+  },
+  classC: {
+    subjects: {
+      core: [
+        { name: "Γλωσσική Διδασκαλία", hours: 2 },
+        { name: "Νεοελληνική Λογοτεχνία", hours: 2 },
+        { name: "Αρχαία Ελληνική Γλώσσα", hours: 1 },
+        { name: "Αρχαία Ελληνικά Κείμενα από Μετάφραση", hours: 2 },
+        { name: "Μαθηματικά", hours: 4 },
+        { name: "Φυσική", hours: 2 },
+        { name: "Χημεία", hours: 1 },
+        { name: "Βιολογία", hours: 1 },
+        { name: "Ιστορία", hours: 2 },
+        { name: "Κοινωνική και Πολιτική Αγωγή", hours: 3 },
+        { name: "Θρησκευτικά", hours: 1 },
+        { name: "Αγγλικά", hours: 2 },
+        { name: "Πληροφορική", hours: 1 },
+        { name: "Εργαστήριο Δεξιοτήτων", hours: 1 }
+      ]
+    }
+  }
+};
 
-  { name: "Μαθηματικά", hours: [4, 4, 4] },
-  { name: "Φυσική", hours: [1, 1, 2] },
-  { name: "Χημεία", hours: [null, 1, 1] },
-  { name: "Βιολογία", hours: [1, 1, 1] },
-  { name: "Γεωλογία - Γεωγραφία", hours: [2, 1, null] },
-  
-  { name: "Ιστορία", hours: [2, 2, 2] },
-  { name: "Θρησκευτικά", hours: [1, 1, 1] },
-  { name: "Αγγλικά", hours: [2, 2, 2] },
-  
-  { name: "Κοινωνική και Πολιτική Αγωγή", hours: [null, null, 3] },
-  
- 
-  { name: "Πληροφορική", hours: [1, 1, 1] },
-  
-  { name: "Εργαστήριο Δεξιοτήτων", hours: [1, 1, 1] }
-];
 
-// Class names for each column
-const classList = ["Α'", "Β'", "Γ'"];
+
 
 export default function EsperinoGimnasio() {
-  // Calculate total hours for each class
-  const totalHours = subjects.reduce(
-    (totals, subject) => {
-      subject.hours.forEach((hours, index) => {
-        if (hours !== null) {
-          totals[index] += hours;
-        }
-      });
-      return totals;
-    },
-    [0, 0, 0] // Initialize with zeros for each class
-  );
-  
+  const [activeTab, setActiveTab] = useState('A');
+
+  // Handle tab change
+  const handleTabChange = (tab) => {
+    setActiveTab(tab);
+  };
+
   return (
     <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Εσπερινό Γυμνάσιο</h1>
-      <h2 className="text-xl font-semibold mb-4">Ωρολόγιο Πρόγραμμα</h2>
-      
-      <div className="overflow-x-auto">
-        <table className="min-w-full bg-white border border-gray-300">
-          <thead>
-            <tr className="bg-gray-100">
-              <th className="py-2 px-4 border-b text-left">Μάθημα</th>
-              {classList.map((className, index) => (
-                <th key={index} className="py-2 px-4 border-b text-center">
-                  {className} Τάξη
-                </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {subjects.map((subject, index) => (
-              <tr key={index} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
-                <td className="py-2 px-4 border-b">{subject.name}</td>
-                {subject.hours.map((hours, hourIdx) => (
-                  <td key={hourIdx} className="py-2 px-4 border-b text-center">
-                    {hours !== null ? hours : "-"}
-                  </td>
-                ))}
-              </tr>
-            ))}
-            <tr className="bg-gray-100 font-semibold">
-              <td className="py-2 px-4 border-b">Σύνολο ωρών</td>
-              {totalHours.map((total, index) => (
-                <td key={index} className="py-2 px-4 border-b text-center">
-                  {total}
-                </td>
-              ))}
-            </tr>
-          </tbody>
-        </table>
+      <h1 className="text-2xl font-bold mb-4">Ωρολόγιο Πρόγραμμα Εσπερινό Γυμνάσιο</h1>
+
+      {/* Tab Navigation */}
+      <div className="flex border-b border-gray-300 mb-6">
+        <button
+          onClick={() => handleTabChange('A')}
+          className={`px-4 py-2 text-sm font-medium ${activeTab === 'A'
+            ? 'text-blue-600 border-b-2 border-blue-600'
+            : 'text-gray-600 hover:text-blue-600 hover:border-blue-300 hover:border-b-2'
+            }`}
+        >
+          Τάξη Α'
+        </button>
+        <button
+          onClick={() => handleTabChange('B')}
+          className={`px-4 py-2 text-sm font-medium ${activeTab === 'B'
+            ? 'text-blue-600 border-b-2 border-blue-600'
+            : 'text-gray-600 hover:text-blue-600 hover:border-blue-300 hover:border-b-2'
+            }`}
+        >
+          Τάξη Β'
+        </button>
+        <button
+          onClick={() => handleTabChange('C')}
+          className={`px-4 py-2 text-sm font-medium ${activeTab === 'C'
+            ? 'text-blue-600 border-b-2 border-blue-600'
+            : 'text-gray-600 hover:text-blue-600 hover:border-blue-300 hover:border-b-2'
+            }`}
+        >
+          Τάξη Γ'
+        </button>
       </div>
-      
-      <p className="mt-4 text-sm text-gray-600">
-        * Η 2η ξένη γλώσσα επιλέγεται μεταξύ Γαλλικών, Γερμανικών και Ιταλικών.
-      </p>
+
+      {/* Content based on active tab */}
+      {activeTab === 'A' && (
+        <section>
+          <h2 className="text-xl font-semibold mb-4">Ωρολόγιο Πρόγραμμα Α' Τάξης</h2>
+          <div className="overflow-x-auto mb-4">
+            <ClassTable data={esperinoGimnasioData.classA.subjects.core} />
+          </div>
+          <p className="text-sm text-gray-600">
+            * Η 2η ξένη γλώσσα επιλέγεται μεταξύ Γαλλικών, Γερμανικών και Ιταλικών.
+          </p>
+        </section>
+      )}
+
+      {activeTab === 'B' && (
+        <section>
+          <h2 className="text-xl font-semibold mb-4">Ωρολόγιο Πρόγραμμα Β' Τάξης</h2>
+          <div className="overflow-x-auto mb-4">
+            <ClassTable data={esperinoGimnasioData.classB.subjects.core} />
+          </div>
+          <p className="text-sm text-gray-600">
+            * Η 2η ξένη γλώσσα επιλέγεται μεταξύ Γαλλικών, Γερμανικών και Ιταλικών.
+          </p>
+        </section>
+      )}
+
+      {activeTab === 'C' && (
+        <section>
+          <h2 className="text-xl font-semibold mb-4">Ωρολόγιο Πρόγραμμα Γ' Τάξης</h2>
+          <div className="overflow-x-auto mb-4">
+            <ClassTable data={esperinoGimnasioData.classC.subjects.core} />
+          </div>
+          <p className="text-sm text-gray-600">
+            * Η 2η ξένη γλώσσα επιλέγεται μεταξύ Γαλλικών, Γερμανικών και Ιταλικών.
+          </p>
+        </section>
+      )}
     </div>
   )
 }

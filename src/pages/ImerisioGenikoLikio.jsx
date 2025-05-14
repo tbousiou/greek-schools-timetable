@@ -1,6 +1,60 @@
 import React from 'react'
 import ClassTable from '../components/ClassTable.jsx'
-import { Table } from 'lucide-react';
+
+
+const imerisioGenikoLikioData = {
+  classA: {
+    subjects: {
+      core: [
+        { name: "Αρχαία Ελληνική Γλώσσα και Γραμματεία", hours: 5 },
+        { name: "Νεοελληνική Γλώσσα και Λογοτεχνία", hours: 4 },
+        { name: "Θρησκευτικά", hours: 2 },
+        { name: "Ιστορία", hours: 2 },
+        { name: "Άλγεβρα", hours: 3 },
+        { name: "Γεωμετρία", hours: 2 },
+        { name: "Αγγλικά", hours: 3 },
+        { name: "2η Ξένη Γλώσσα", hours: 2 },
+        { name: "Φυσική", hours: 2 },
+        { name: "Χημεία", hours: 2 },
+        { name: "Βιολογία", hours: 2 },
+        { name: "Φυσική Αγωγή", hours: 2 },
+        { name: "Πολιτική Παιδεία", hours: 2 },
+        { name: "Εφαρμογές Πληροφορικής", hours: 2 }
+      ]
+    }
+  },
+  classB: {
+    subjects: {
+      core: [
+        { name: "Αρχαία Ελληνική Γλώσσα και Γραμματεία", hours: 2 },
+        { name: "Νεοελληνική Γλώσσα και Λογοτεχνία", hours: 4 },
+        { name: "Άλγεβρα", hours: 3 },
+        { name: "Γεωμετρία", hours: 2 },
+        { name: "Φυσική", hours: 2 },
+        { name: "Χημεία", hours: 2 },
+        { name: "Βιολογία", hours: 2 },
+        { name: "Εισαγωγή στις Αρχές της Επιστήμης των Η/Υ", hours: 2 },
+        { name: "Ιστορία", hours: 2 },
+        { name: "Φιλοσοφία", hours: 2 },
+        { name: "Θρησκευτικά", hours: 2 },
+        { name: "Αγγλικά", hours: 2 },
+        { name: "2η Ξένη Γλώσσα", hours: 1 },
+        { name: "Φυσική Αγωγή", hours: 2 }
+      ],
+      orientationGroupA: [
+          { name: "Αρχαία Ελληνική Γλώσσα και Γραμματεία", hours: 3 },
+          { name: "Λατινικά", hours: 2 }
+        ],
+      orientationGroupB: [
+          { name: "Φυσική", hours: 2 },
+          { name: "Μαθηματικά", hours: 3 }
+        ]
+    }
+  }
+
+};
+
+
 
 // Core subjects for Class A (Α' Τάξη)
 const coreSubjectsA = [
@@ -94,7 +148,7 @@ const orientationGroupsC = {
 };
 
 export default function ImerisioGenikoLikio() {
-  
+
   return (
     <div className="p-4">
       <h1 className="text-2xl font-bold mb-4">Ημερήσιο Γενικό Λύκειο</h1>

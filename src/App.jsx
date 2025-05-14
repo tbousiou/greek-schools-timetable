@@ -10,6 +10,7 @@ import ImerisioGimnasio from './pages/ImerisioGimnasio'
 import EsperinoGimnasio from './pages/EsperinoGimnasio'
 import ImerisioGenikoLikio from './pages/ImerisioGenikoLikio'
 import EsperinoGenikoLikio from './pages/EsperinoGenikoLikio'
+import ImerisioEPAL from './pages/ImerisioEPAL'
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
@@ -39,6 +40,7 @@ function App() {
               <Route path="/esperino-gymnasio" element={<EsperinoGimnasio />} />
               <Route path="/imerisio-geniko-lykeio" element={<ImerisioGenikoLikio />} />
               <Route path="/esperino-geniko-lykeio" element={<EsperinoGenikoLikio />} />
+              <Route path="/imerisio-epal" element={<ImerisioEPAL />} />
               {/* Add more routes here */}
             </Routes>
           </main>
