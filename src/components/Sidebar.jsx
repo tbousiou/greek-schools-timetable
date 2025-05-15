@@ -5,8 +5,8 @@ const navGroups = [
     {
         title: 'Πρωτοβάθμια Εκπαίδευση',
         items: [
-            { title: 'Δημοτικό', path: '/dimotiko' },
             { title: 'Νηπιαγωγείο', path: '/nipiagogio' },
+            { title: 'Δημοτικό', path: '/dimotiko' },
         ],
     },
     {
