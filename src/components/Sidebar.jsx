@@ -1,9 +1,10 @@
-import { X } from 'lucide-react'
+import { X, ChevronDown, ChevronRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 
 const navGroups = [
     {
-        title: 'Πρωτοβάθμια Εκπαίδευση',
+        title: 'Πρωτοβάθμια',
         items: [
             { title: 'Νηπιαγωγείο', path: '/nipiagogio' },
             { title: 'Δημοτικό', path: '/dimotiko' },
@@ -28,11 +29,49 @@ const navGroups = [
         items: [
             { title: 'Ημερήσιο ΕΠΑ.Λ.', path: '/imerisio-epal' },
             { title: 'Εσπερινό ΕΠΑ.Λ.', path: '/esperino-epal' },
+            { title: 'Πρότυπο ΕΠΑ.Λ.', path: '/protypo-epal' },
+        ],
+    },
+    {
+        title: 'ΕΝΕΕΓΥΛ',
+        items: [
+            { title: 'Γυμνάσιο', path: '/eneegyl-gymnasio' },
+            { title: 'Λύκειο', path: '/eneegyl-lykeio' },
+        ],
+    },
+     {
+        title: 'EAE',
+        items: [
+            { title: 'Γυμνάσιο', path: '/eae-gymnasio' },
+            { title: 'Λύκειο', path: '/eae-lykeio' },
+        ],
+    },
+    {
+        title: 'Μουσικά',
+        items: [
+            { title: 'Γυμνάσιο', path: '/mousiko-gymnasio' },
+            { title: 'Λύκειο', path: '/mousiko-lykeio' },
+        ],
+    },
+    {
+        title: 'Καλλιτεχνικά',
+        items: [
+            { title: 'Γυμνάσιο', path: '/kallitexniko-gymnasio' },
+            { title: 'Λύκειο', path: '/kallitexniko-lykeio' },
         ],
     },
 ]
 
 function Sidebar({ sidebarOpen, toggleSidebar }) {
+    const [expandedGroups, setExpandedGroups] = useState({});
+    
+    const toggleGroup = (groupIndex) => {
+        setExpandedGroups(prev => ({
+            ...prev,
+            [groupIndex]: !prev[groupIndex]
+        }));
+    };
+
     return (
         <>
             {sidebarOpen && (
@@ -61,15 +100,29 @@ function Sidebar({ sidebarOpen, toggleSidebar }) {
                     <ul className="space-y-4">
                         {navGroups.map((group, groupIndex) => (
                             <li key={groupIndex}>
-                                <h3 className="text-lg font-semibold text-gray-300 mb-2">
-                                    {group.title}
-                                </h3>
-                                <ul className="space-y-2">
+                                <button 
+                                    onClick={() => toggleGroup(groupIndex)}
+                                    className="flex items-center justify-between w-full text-left text-lg font-semibold text-gray-300 mb-2 hover:text-white"
+                                >
+                                    <span>{group.title}</span>
+                                    {expandedGroups[groupIndex] ? (
+                                        <ChevronDown size={18} />
+                                    ) : (
+                                        <ChevronRight size={18} />
+                                    )}
+                                </button>
+                                <ul 
+                                    className={`space-y-2 overflow-hidden transition-all duration-300 ${
+                                        expandedGroups[groupIndex] 
+                                        ? 'max-h-40 opacity-100 mt-2' 
+                                        : 'max-h-0 opacity-0'
+                                    }`}
+                                >
                                     {group.items.map((item, itemIndex) => (
                                         <li key={itemIndex}>
                                             <Link
                                                 to={item.path}
-                                                className="block p-2 rounded-md hover:bg-slate-700 transition-colors"
+                                                className="block p-2 rounded-md hover:bg-slate-700 transition-colors pl-4"
                                             >
                                                 {item.title}
                                             </Link>

@@ -112,7 +112,7 @@ export default function EsperinoGimnasio() {
       {/* Content based on active tab */}
       {activeTab === 'A' && (
         <section>
-          <h2 className="text-xl font-semibold mb-4">Ωρολόγιο Πρόγραμμα Α' Τάξης</h2>
+          <h2 className="text-xl font-semibold mb-4">Μαθήματα Γενικής Παιδείας Α' Τάξης</h2>
           <div className="overflow-x-auto mb-4">
             <ClassTable data={esperinoGimnasioData.classA.subjects.core} />
           </div>
@@ -124,7 +124,7 @@ export default function EsperinoGimnasio() {
 
       {activeTab === 'B' && (
         <section>
-          <h2 className="text-xl font-semibold mb-4">Ωρολόγιο Πρόγραμμα Β' Τάξης</h2>
+          <h2 className="text-xl font-semibold mb-4">Μαθήματα Γενικής Παιδείας Β' Τάξης</h2>
           <div className="overflow-x-auto mb-4">
             <ClassTable data={esperinoGimnasioData.classB.subjects.core} />
           </div>
@@ -136,7 +136,7 @@ export default function EsperinoGimnasio() {
 
       {activeTab === 'C' && (
         <section>
-          <h2 className="text-xl font-semibold mb-4">Ωρολόγιο Πρόγραμμα Γ' Τάξης</h2>
+          <h2 className="text-xl font-semibold mb-4">Μαθήματα Γενικής Παιδείας Γ' Τάξης</h2>
           <div className="overflow-x-auto mb-4">
             <ClassTable data={esperinoGimnasioData.classC.subjects.core} />
           </div>

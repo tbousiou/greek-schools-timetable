@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import ClassTable from '../components/ClassTable';
 
-const imerisioGimnasioData = {
+const mousikoGimnasioData = {
   classA: {
     subjects: {
       core: [
@@ -24,6 +24,13 @@ const imerisioGimnasioData = {
         { name: "Μουσική", hours: 1 },
         { name: "Καλλιτεχνικά", hours: 1 },
         { name: "Εργαστήριο Δεξιοτήτων", hours: 1 }
+      ],
+      music: [
+        { name: "Ευρωπαϊκή Μουσική - Θεωρία και Πράξη", hours: 3 },
+        { name: "Ελληνική Παραδοσιακή Μουσική", hours: 3 },
+        { name: "Ατομικό Όργανο Επιλογής", hours: 2 },
+        { name: "Χορωδία", hours: 2 },
+        { name: "Μουσικό Σύνολο (Οργανοχρησία)", hours: 2 }
       ]
     }
   },
@@ -50,6 +57,15 @@ const imerisioGimnasioData = {
         { name: "Μουσική", hours: 1 },
         { name: "Καλλιτεχνικά", hours: 1 },
         { name: "Εργαστήριο Δεξιοτήτων", hours: 1 }
+      ],
+      music: [
+        { name: "Ευρωπαϊκή Μουσική - Θεωρία και Πράξη", hours: 3 },
+        { name: "Ελληνική Παραδοσιακή Μουσική", hours: 3 },
+        { name: "Ατομικό Όργανο Επιλογής", hours: 2 },
+        { name: "Πιάνο/Αρμόνιο", hours: 1 },
+        { name: "Χορωδία", hours: 2 },
+        { name: "Μουσικό Σύνολο (Οργανοχρησία)", hours: 2 },
+        { name: "Ιστορία της Μουσικής", hours: 1 }
       ]
     }
   },
@@ -75,13 +91,23 @@ const imerisioGimnasioData = {
         { name: "Μουσική", hours: 1 },
         { name: "Καλλιτεχνικά", hours: 1 },
         { name: "Εργαστήριο Δεξιοτήτων", hours: 1 }
+      ],
+      music: [
+        { name: "Ευρωπαϊκή Μουσική - Θεωρία και Πράξη", hours: 3 },
+        { name: "Ελληνική Παραδοσιακή Μουσική", hours: 3 },
+        { name: "Ατομικό Όργανο Επιλογής", hours: 2 },
+        { name: "Πιάνο/Αρμόνιο", hours: 1 },
+        { name: "Χορωδία", hours: 2 },
+        { name: "Μουσικό Σύνολο (Οργανοχρησία)", hours: 2 },
+        { name: "Ιστορία της Μουσικής", hours: 1 },
+        { name: "Μουσική Τεχνολογία", hours: 1 }
       ]
     }
   },
 }
 
 
-export default function ImerisioGimnasio() {
+export default function MousikoGimnasio() {
   const [activeTab, setActiveTab] = useState('A');
 
   // Handle tab change
@@ -91,7 +117,7 @@ export default function ImerisioGimnasio() {
 
   return (
     <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Ωρολόγιο Πρόγραμμα Ημερήσιο Γυμνάσιο</h1>
+      <h1 className="text-2xl font-bold mb-4">Ωρολόγιο Πρόγραμμα Μουσικό Γυμνάσιο</h1>
 
       {/* Tab Navigation */}
       <div className="flex border-b border-gray-300 mb-6">
@@ -129,11 +155,16 @@ export default function ImerisioGimnasio() {
         <section>
           <h2 className="text-xl font-semibold mb-4">Μαθήματα Γενικής Παιδείας Α' Τάξης</h2>
           <div className="overflow-x-auto mb-4">
-            <ClassTable data={imerisioGimnasioData.classA.subjects.core} />
+            <ClassTable data={mousikoGimnasioData.classA.subjects.core} />
           </div>
           <p className="text-sm text-gray-600">
             * Η 2η ξένη γλώσσα επιλέγεται μεταξύ Γαλλικών, Γερμανικών και Ιταλικών.
           </p>
+
+          <h2 className="text-xl font-semibold mb-4 mt-8">Μαθήματα Μουσικής Παιδείας Α' Τάξης</h2>
+          <div className="overflow-x-auto mb-4">
+            <ClassTable data={mousikoGimnasioData.classA.subjects.music} />
+          </div>
         </section>
       )}
 
@@ -141,11 +172,16 @@ export default function ImerisioGimnasio() {
         <section>
           <h2 className="text-xl font-semibold mb-4">Μαθήματα Γενικής Παιδείας Β' Τάξης</h2>
           <div className="overflow-x-auto mb-4">
-            <ClassTable data={imerisioGimnasioData.classB.subjects.core} />
+            <ClassTable data={mousikoGimnasioData.classB.subjects.core} />
           </div>
           <p className="text-sm text-gray-600">
             * Η 2η ξένη γλώσσα επιλέγεται μεταξύ Γαλλικών, Γερμανικών και Ιταλικών.
           </p>
+
+          <h2 className="text-xl font-semibold mb-4 mt-8">Μαθήματα Μουσικής Παιδείας Β' Τάξης</h2>
+          <div className="overflow-x-auto mb-4">
+            <ClassTable data={mousikoGimnasioData.classB.subjects.music} />
+          </div>
         </section>
       )}
 
@@ -153,11 +189,17 @@ export default function ImerisioGimnasio() {
         <section>
           <h2 className="text-xl font-semibold mb-4">Μαθήματα Γενικής Παιδείας Γ' Τάξης</h2>
           <div className="overflow-x-auto mb-4">
-            <ClassTable data={imerisioGimnasioData.classC.subjects.core} />
+            <ClassTable data={mousikoGimnasioData.classC.subjects.core} />
           </div>
           <p className="text-sm text-gray-600">
             * Η 2η ξένη γλώσσα επιλέγεται μεταξύ Γαλλικών, Γερμανικών και Ιταλικών.
           </p>
+
+          <h2 className="text-xl font-semibold mb-4 mt-8">Μαθήματα Μουσικής Παιδείας Γ' Τάξης</h2>
+          <div className="overflow-x-auto mb-4">
+            <ClassTable data={mousikoGimnasioData.classC.subjects.music} />
+          </div>
+          
         </section>
       )}
     </div>

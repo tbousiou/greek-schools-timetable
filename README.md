@@ -1,12 +1,47 @@
-# React + Vite
+# Ωρολόγια Προγράμματα Ελληνικών Σχολείων
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Περιγραφή
 
-Currently, two official plugins are available:
+Αυτή η εφαρμογή παρέχει οργανωμένα εβδομαδιαία ωρολόγια προγράμματα για διάφορους τύπους ελληνικών σχολείων. Δημιουργήθηκε για να διευκολύνει την πρόσβαση σε προγράμματα μαθημάτων για εκπαιδευτικούς, μαθητές και γονείς.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Χαρακτηριστικά
 
-## Expanding the ESLint configuration
+- Προβολή ωρολόγιων προγραμμάτων για διαφορετικούς τύπους σχολείων (Γυμνάσια, Λύκεια)
+- Εύκολη πλοήγηση μεταξύ τάξεων
+- Απλή και φιλική προς το χρήστη διεπαφή
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Εγκατάσταση
+
+1. Κλωνοποιήστε το αποθετήριο:
+```
+git clone https://github.com/your-username/greek-schools-timetable.git
+```
+
+2. Μεταβείτε στον κατάλογο του έργου:
+```
+cd greek-schools-timetable
+```
+
+3. Εγκαταστήστε τις εξαρτήσεις:
+```
+npm install
+```
+
+4. Εκκινήστε την εφαρμογή σε περιβάλλον ανάπτυξης:
+```
+npm run dev
+```
+
+## Τεχνολογίες
+
+- React
+- Vite
+- Tailwind CSS
+
+## Άδεια Χρήσης
+
+Αυτό το έργο διανέμεται υπό την άδεια MIT.
+
+## Κατάσταση Έργου
+
+Σημείωση: Το έργο βρίσκεται σε *φάση ανάπτυξης* και *δεν έχει ολοκληρωθεί ακόμα*. Ορισμένες λειτουργίες μπορεί να μην είναι διαθέσιμες ή να παρουσιάζουν προβλήματα.

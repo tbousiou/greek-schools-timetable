@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import ClassTable from '../components/ClassTable';
 
-const imerisioGimnasioData = {
+const kallitexnikoGimnasioData = {
   classA: {
     subjects: {
       core: [
@@ -81,7 +81,7 @@ const imerisioGimnasioData = {
 }
 
 
-export default function ImerisioGimnasio() {
+export default function KallitexnikoGimnasio() {
   const [activeTab, setActiveTab] = useState('A');
 
   // Handle tab change
@@ -91,7 +91,7 @@ export default function ImerisioGimnasio() {
 
   return (
     <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Ωρολόγιο Πρόγραμμα Ημερήσιο Γυμνάσιο</h1>
+      <h1 className="text-2xl font-bold mb-4">Ωρολόγιο Πρόγραμμα Καλλιτεχνικό Γυμνάσιο</h1>
 
       {/* Tab Navigation */}
       <div className="flex border-b border-gray-300 mb-6">
@@ -129,7 +129,7 @@ export default function ImerisioGimnasio() {
         <section>
           <h2 className="text-xl font-semibold mb-4">Μαθήματα Γενικής Παιδείας Α' Τάξης</h2>
           <div className="overflow-x-auto mb-4">
-            <ClassTable data={imerisioGimnasioData.classA.subjects.core} />
+            <ClassTable data={kallitexnikoGimnasioData.classA.subjects.core} />
           </div>
           <p className="text-sm text-gray-600">
             * Η 2η ξένη γλώσσα επιλέγεται μεταξύ Γαλλικών, Γερμανικών και Ιταλικών.
@@ -141,7 +141,7 @@ export default function ImerisioGimnasio() {
         <section>
           <h2 className="text-xl font-semibold mb-4">Μαθήματα Γενικής Παιδείας Β' Τάξης</h2>
           <div className="overflow-x-auto mb-4">
-            <ClassTable data={imerisioGimnasioData.classB.subjects.core} />
+            <ClassTable data={kallitexnikoGimnasioData.classB.subjects.core} />
           </div>
           <p className="text-sm text-gray-600">
             * Η 2η ξένη γλώσσα επιλέγεται μεταξύ Γαλλικών, Γερμανικών και Ιταλικών.
@@ -153,7 +153,7 @@ export default function ImerisioGimnasio() {
         <section>
           <h2 className="text-xl font-semibold mb-4">Μαθήματα Γενικής Παιδείας Γ' Τάξης</h2>
           <div className="overflow-x-auto mb-4">
-            <ClassTable data={imerisioGimnasioData.classC.subjects.core} />
+            <ClassTable data={kallitexnikoGimnasioData.classC.subjects.core} />
           </div>
           <p className="text-sm text-gray-600">
             * Η 2η ξένη γλώσσα επιλέγεται μεταξύ Γαλλικών, Γερμανικών και Ιταλικών.
