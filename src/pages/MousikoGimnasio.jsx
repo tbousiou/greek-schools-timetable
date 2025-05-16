@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import ClassTable from '../components/ClassTable';
+import TabNavigation from '../components/TabNavigation';
 
 const mousikoGimnasioData = {
   classA: {
@@ -110,45 +111,23 @@ const mousikoGimnasioData = {
 export default function MousikoGimnasio() {
   const [activeTab, setActiveTab] = useState('A');
 
-  // Handle tab change
-  const handleTabChange = (tab) => {
-    setActiveTab(tab);
-  };
+  // Define tabs as data
+  const tabs = [
+    { id: 'A', label: 'Τάξη Α\'' },
+    { id: 'B', label: 'Τάξη Β\'' },
+    { id: 'C', label: 'Τάξη Γ\'' }
+  ];
 
   return (
     <div className="p-4">
       <h1 className="text-2xl font-bold mb-4">Ωρολόγιο Πρόγραμμα Μουσικό Γυμνάσιο</h1>
 
-      {/* Tab Navigation */}
-      <div className="flex border-b border-gray-300 mb-6">
-        <button
-          onClick={() => handleTabChange('A')}
-          className={`px-4 py-2 text-sm font-medium ${activeTab === 'A'
-              ? 'text-blue-600 border-b-2 border-blue-600'
-              : 'text-gray-600 hover:text-blue-600 hover:border-blue-300 hover:border-b-2'
-            }`}
-        >
-          Τάξη Α'
-        </button>
-        <button
-          onClick={() => handleTabChange('B')}
-          className={`px-4 py-2 text-sm font-medium ${activeTab === 'B'
-              ? 'text-blue-600 border-b-2 border-blue-600'
-              : 'text-gray-600 hover:text-blue-600 hover:border-blue-300 hover:border-b-2'
-            }`}
-        >
-          Τάξη Β'
-        </button>
-        <button
-          onClick={() => handleTabChange('C')}
-          className={`px-4 py-2 text-sm font-medium ${activeTab === 'C'
-              ? 'text-blue-600 border-b-2 border-blue-600'
-              : 'text-gray-600 hover:text-blue-600 hover:border-blue-300 hover:border-b-2'
-            }`}
-        >
-          Τάξη Γ'
-        </button>
-      </div>
+      {/* Using the abstracted TabNavigation component */}
+      <TabNavigation 
+        activeTab={activeTab} 
+        onTabChange={setActiveTab} 
+        tabs={tabs} 
+      />
 
       {/* Content based on active tab */}
       {activeTab === 'A' && (
