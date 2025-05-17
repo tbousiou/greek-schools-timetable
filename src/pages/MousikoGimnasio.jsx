@@ -6,32 +6,33 @@ const mousikoGimnasioData = {
   classA: {
     subjects: {
       core: [
-        { name: "Γλωσσική Διδασκαλία", hours: 3 },
-        { name: "Νεοελληνική Λογοτεχνία", hours: 2 },
-        { name: "Αρχαία Ελληνική Γλώσσα", hours: 2 },
-        { name: "Αρχαία Ελληνικά Κείμενα από Μετάφραση", hours: 2 },
+        { name: "Νεοελληνική Γλώσσα και Γραμματεία: Γλωσσική Διδασκαλία", hours: 3 },
+        { name: "Νεοελληνική Γλώσσα και Γραμματεία: Νεοελληνική Λογοτεχνία", hours: 2 },
+        { name: "Αρχαία Ελληνική Γλώσσα και Γραμματεία: Αρχαία Ελληνική Γλώσσα", hours: 2 },
+        { name: "Αρχαία Ελληνική Γλώσσα και Γραμματεία: Αρχαία Ελληνικά Κείμενα από Μετάφραση", hours: 2 },
         { name: "Μαθηματικά", hours: 4 },
         { name: "Φυσική", hours: 1 },
         { name: "Βιολογία", hours: 1 },
         { name: "Γεωλογία - Γεωγραφία", hours: 1 },
         { name: "Ιστορία", hours: 2 },
-        { name: "Θρησκευτικά", hours: 2 },
+        { name: "Θρησκευτικά", hours: 1 },
         { name: "Αγγλικά", hours: 2 },
-        { name: "2η Ξένη Γλώσσα*", hours: 2 },
-        { name: "Οικιακή Οικονομία", hours: 1 },
-        { name: "Φυσική Αγωγή", hours: 2 },
-        { name: "Τεχνολογία", hours: 1 },
-        { name: "Πληροφορική", hours: 2 },
-        { name: "Μουσική", hours: 1 },
-        { name: "Καλλιτεχνικά", hours: 1 },
-        { name: "Εργαστήριο Δεξιοτήτων", hours: 1 }
+        { name: "Γαλλικά/Γερμανικά", hours: 2 },
+        { name: "Φυσική Αγωγή*", hours: 2 },
+        { name: "Πληροφορική", hours: 1 },
+        { name: "Αισθητική Αγωγή: Θέατρο", hours: 1 },
+        { name: "Αισθητική Αγωγή: Καλλιτεχνικά", hours: 1 },
+        { name: "Αισθητική Αγωγή: Ιστορία Τέχνης", hours: 1 }
       ],
       music: [
-        { name: "Ευρωπαϊκή Μουσική - Θεωρία και Πράξη", hours: 3 },
-        { name: "Ελληνική Παραδοσιακή Μουσική", hours: 3 },
+        { name: "Ευρωπαϊκή Μουσική (Θεωρία και Πράξη)", hours: 2 },
+        { name: "Ελληνική Παραδοσιακή Μουσική (Θεωρία και Πράξη)", hours: 2 },
+        { name: "Κριτική Μουσική Ακρόαση", hours: 1 },
+        { name: "Χορωδία*", hours: 2 },
+        { name: "Μουσικό Σύνολο (Οργανοχρησίας ή άλλου είδους)", hours: 2 },
+        { name: "Πιάνο", hours: 1 },
+        { name: "Ταμπουράς ή άλλο τοπικό παραδοσιακό όργανο αναφοράς", hours: 1 },
         { name: "Ατομικό Όργανο Επιλογής", hours: 2 },
-        { name: "Χορωδία", hours: 2 },
-        { name: "Μουσικό Σύνολο (Οργανοχρησία)", hours: 2 }
       ]
     }
   },
@@ -39,69 +40,65 @@ const mousikoGimnasioData = {
   classB: {
     subjects: {
       core: [
-        { name: "Γλωσσική Διδασκαλία", hours: 2 },
-        { name: "Νεοελληνική Λογοτεχνία", hours: 2 },
-        { name: "Αρχαία Ελληνική Γλώσσα", hours: 2 },
-        { name: "Αρχαία Ελληνικά Κείμενα από Μετάφραση", hours: 2 },
+        { name: "Νεοελληνική Γλώσσα και Γραμματεία: Γλωσσική Διδασκαλία", hours: 2 },
+        { name: "Νεοελληνική Γλώσσα και Γραμματεία: Νεοελληνική Λογοτεχνία", hours: 2 },
+        { name: "Αρχαία Ελληνική Γλώσσα και Γραμματεία: Αρχαία Ελληνική Γλώσσα", hours: 2 },
+        { name: "Αρχαία Ελληνική Γλώσσα και Γραμματεία: Αρχαία Ελληνικά Κείμενα από Μετάφραση", hours: 2 },
         { name: "Μαθηματικά", hours: 4 },
         { name: "Φυσική", hours: 2 },
         { name: "Χημεία", hours: 1 },
         { name: "Βιολογία", hours: 1 },
-        { name: "Γεωλογία - Γεωγραφία", hours: 2 },
+        { name: "Γεωλογία - Γεωγραφία", hours: 1 },
         { name: "Ιστορία", hours: 2 },
-        { name: "Θρησκευτικά", hours: 2 },
+        { name: "Θρησκευτικά", hours: 1 },
         { name: "Αγγλικά", hours: 2 },
-        { name: "2η Ξένη Γλώσσα*", hours: 2 },
-        { name: "Φυσική Αγωγή", hours: 2 },
-        { name: "Τεχνολογία", hours: 1 },
+        { name: "Γαλλικά/Γερμανικά", hours: 2 },
+        { name: "Φυσική Αγωγή*", hours: 2 },
         { name: "Πληροφορική", hours: 1 },
-        { name: "Μουσική", hours: 1 },
-        { name: "Καλλιτεχνικά", hours: 1 },
-        { name: "Εργαστήριο Δεξιοτήτων", hours: 1 }
+        { name: "Αισθητική Αγωγή: Θέατρο", hours: 1 },
+        { name: "Αισθητική Αγωγή: Καλλιτεχνικά", hours: 1 },
       ],
       music: [
-        { name: "Ευρωπαϊκή Μουσική - Θεωρία και Πράξη", hours: 3 },
-        { name: "Ελληνική Παραδοσιακή Μουσική", hours: 3 },
+        { name: "Ευρωπαϊκή Μουσική (Θεωρία και Πράξη)", hours: 2 },
+        { name: "Ελληνική Παραδοσιακή Μουσική (Θεωρία και Πράξη)", hours: 2 },
+        { name: "Ιστορία Μουσικής", hours: 1 },
+        { name: "Χορωδία*", hours: 2 },
+        { name: "Μουσικό Σύνολο (Οργανοχρησίας ή άλλου είδους)", hours: 2 },
+        { name: "Πιάνο", hours: 1 },
+        { name: "Ταμπουράς ή άλλο τοπικό παραδοσιακό όργανο αναφοράς", hours: 1 },
         { name: "Ατομικό Όργανο Επιλογής", hours: 2 },
-        { name: "Πιάνο/Αρμόνιο", hours: 1 },
-        { name: "Χορωδία", hours: 2 },
-        { name: "Μουσικό Σύνολο (Οργανοχρησία)", hours: 2 },
-        { name: "Ιστορία της Μουσικής", hours: 1 }
       ]
     }
   },
   classC: {
     subjects: {
       core: [
-        { name: "Γλωσσική Διδασκαλία", hours: 2 },
-        { name: "Νεοελληνική Λογοτεχνία", hours: 2 },
-        { name: "Αρχαία Ελληνική Γλώσσα", hours: 2 },
-        { name: "Αρχαία Ελληνικά Κείμενα από Μετάφραση", hours: 2 },
+        { name: "Νεοελληνική Γλώσσα και Γραμματεία: Γλωσσική Διδασκαλία", hours: 2 },
+        { name: "Νεοελληνική Γλώσσα και Γραμματεία: Νεοελληνική Λογοτεχνία", hours: 2 },
+        { name: "Αρχαία Ελληνική Γλώσσα και Γραμματεία: Αρχαία Ελληνική Γλώσσα", hours: 2 },
+        { name: "Αρχαία Ελληνική Γλώσσα και Γραμματεία: Αρχαία Ελληνικά Κείμενα από Μετάφραση", hours: 2 },
         { name: "Μαθηματικά", hours: 4 },
         { name: "Φυσική", hours: 2 },
         { name: "Χημεία", hours: 1 },
         { name: "Βιολογία", hours: 1 },
         { name: "Ιστορία", hours: 2 },
-        { name: "Θρησκευτικά", hours: 2 },
+        { name: "Κοινωνική και πολιτική Αγωγή", hours: 1 },
+        { name: "Θρησκευτικά", hours: 1 },
         { name: "Αγγλικά", hours: 2 },
-        { name: "2η Ξένη Γλώσσα*", hours: 2 },
-        { name: "Κοινωνική και Πολιτική Αγωγή", hours: 3 },
-        { name: "Φυσική Αγωγή", hours: 2 },
-        { name: "Τεχνολογία", hours: 1 },
+        { name: "Γαλλικά/Γερμανικά", hours: 2 },
+        { name: "Φυσική Αγωγή*", hours: 2 },
         { name: "Πληροφορική", hours: 1 },
-        { name: "Μουσική", hours: 1 },
-        { name: "Καλλιτεχνικά", hours: 1 },
-        { name: "Εργαστήριο Δεξιοτήτων", hours: 1 }
-      ],
+        { name: "Αισθητική Αγωγή: Θέατρο", hours: 1 },
+        { name: "Αισθητική Αγωγή: Καλλιτεχνικά", hours: 1 },],
       music: [
-        { name: "Ευρωπαϊκή Μουσική - Θεωρία και Πράξη", hours: 3 },
-        { name: "Ελληνική Παραδοσιακή Μουσική", hours: 3 },
+        { name: "Ευρωπαϊκή Μουσική (Θεωρία και Πράξη και Εισαγωγή στην Αρμονία)", hours: 3 },
+        { name: "Ελληνική Παραδοσιακή Μουσική (Θεωρία και Πράξη)", hours: 2 },
+        { name: "Ιστορία Μουσικής", hours: 1 },
+        { name: "Χορωδία*", hours: 2 },
+        { name: "Μουσικό Σύνολο (Οργανοχρησίας ή άλλου είδους)", hours: 2 },
+        { name: "Πιάνο", hours: 1 },
+        { name: "Ταμπουράς ή άλλο τοπικό παραδοσιακό όργανο αναφοράς", hours: 1 },
         { name: "Ατομικό Όργανο Επιλογής", hours: 2 },
-        { name: "Πιάνο/Αρμόνιο", hours: 1 },
-        { name: "Χορωδία", hours: 2 },
-        { name: "Μουσικό Σύνολο (Οργανοχρησία)", hours: 2 },
-        { name: "Ιστορία της Μουσικής", hours: 1 },
-        { name: "Μουσική Τεχνολογία", hours: 1 }
       ]
     }
   },
@@ -118,15 +115,33 @@ export default function MousikoGimnasio() {
     { id: 'C', label: 'Τάξη Γ\'' }
   ];
 
+  const notesCore = (
+    <div className="text-sm text-gray-600">
+      <p className='mb-2'>
+        - Η 2η ώρα Φυσικής Αγωγής στις τάξεις Α’ και Β’ του Γυμνασίου θα είναι Ελληνικοί Χοροί.
+      </p>
+    </div>
+  );
+
+  const notesMusic = (
+    <div className="text-sm text-gray-600">
+      <p className='mb-2'>
+        - Στο πλαίσιο του μαθήματος «Χορωδία» οι μαθητές διδάσκονται υποχρεωτικά ρεπερτόριο Ελληνικής Παραδοσιακής Μουσικής σε μια τάξη του Γυμνασίου (Α’ ή Β’ ή Γ’).
+      </p>
+    </div>
+  );
+
+
   return (
     <div className="p-4">
+      
       <h1 className="text-2xl font-bold mb-4">Ωρολόγιο Πρόγραμμα Μουσικό Γυμνάσιο</h1>
 
       {/* Using the abstracted TabNavigation component */}
-      <TabNavigation 
-        activeTab={activeTab} 
-        onTabChange={setActiveTab} 
-        tabs={tabs} 
+      <TabNavigation
+        activeTab={activeTab}
+        onTabChange={setActiveTab}
+        tabs={tabs}
       />
 
       {/* Content based on active tab */}
@@ -136,14 +151,16 @@ export default function MousikoGimnasio() {
           <div className="overflow-x-auto mb-4">
             <ClassTable data={mousikoGimnasioData.classA.subjects.core} />
           </div>
-          <p className="text-sm text-gray-600">
-            * Η 2η ξένη γλώσσα επιλέγεται μεταξύ Γαλλικών, Γερμανικών και Ιταλικών.
-          </p>
+          
+          {notesCore}
 
           <h2 className="text-xl font-semibold mb-4 mt-8">Μαθήματα Μουσικής Παιδείας Α' Τάξης</h2>
           <div className="overflow-x-auto mb-4">
             <ClassTable data={mousikoGimnasioData.classA.subjects.music} />
           </div>
+
+          {notesMusic}
+
         </section>
       )}
 
@@ -153,14 +170,16 @@ export default function MousikoGimnasio() {
           <div className="overflow-x-auto mb-4">
             <ClassTable data={mousikoGimnasioData.classB.subjects.core} />
           </div>
-          <p className="text-sm text-gray-600">
-            * Η 2η ξένη γλώσσα επιλέγεται μεταξύ Γαλλικών, Γερμανικών και Ιταλικών.
-          </p>
+          
+          {notesCore}
 
           <h2 className="text-xl font-semibold mb-4 mt-8">Μαθήματα Μουσικής Παιδείας Β' Τάξης</h2>
           <div className="overflow-x-auto mb-4">
             <ClassTable data={mousikoGimnasioData.classB.subjects.music} />
           </div>
+          
+          {notesMusic}
+        
         </section>
       )}
 
@@ -170,15 +189,16 @@ export default function MousikoGimnasio() {
           <div className="overflow-x-auto mb-4">
             <ClassTable data={mousikoGimnasioData.classC.subjects.core} />
           </div>
-          <p className="text-sm text-gray-600">
-            * Η 2η ξένη γλώσσα επιλέγεται μεταξύ Γαλλικών, Γερμανικών και Ιταλικών.
-          </p>
+          
+          {notesCore}
 
           <h2 className="text-xl font-semibold mb-4 mt-8">Μαθήματα Μουσικής Παιδείας Γ' Τάξης</h2>
           <div className="overflow-x-auto mb-4">
             <ClassTable data={mousikoGimnasioData.classC.subjects.music} />
           </div>
-          
+
+          {notesMusic}
+
         </section>
       )}
     </div>
