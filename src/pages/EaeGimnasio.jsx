@@ -3,13 +3,26 @@ import ClassTable from '../components/ClassTable';
 import TabNavigation from '../components/TabNavigation';
 
 const eaeGimnasioData = {
+  preliminary: {
+    subjects: {
+      core: [
+        { name: "Νεοελληνική Γλώσσα και Γραμματεία", hours: 15 },
+        { name: "Μαθηματικά", hours: 5 },
+        { name: "Νοηματική Γλώσσα για κωφούς και βαρήκοους ή εναλλακτικές μορφές επικοινωνίας για τους κινητικά ανάπηρους μαθητές μέσω Η/Υ ", hours: 4 },
+        { name: "Φυσική Αγωγή", hours: 2 },
+        { name: "Καλλιτεχνική Παιδεία (Καλλιτεχνικά ή Μουσική ή θεατρική Παιδεία) ", hours: 2 },
+        { name: "Υποστηρικτικές", hours: 4 },
+        { name: "Εργαστήριο Δεξιοτήτων", hours: 1 }
+      ]
+    }
+  },
   classA: {
     subjects: {
       core: [
-        { name: "Γλωσσική Διδασκαλία", hours: 3 },
-        { name: "Νεοελληνική Λογοτεχνία", hours: 2 },
-        { name: "Αρχαία Ελληνική Γλώσσα", hours: 2 },
-        { name: "Αρχαία Ελληνικά Κείμενα από Μετάφραση", hours: 2 },
+        { name: "Νεοελληνική Γλώσσα και Γραμματεία: Γλωσσική Διδασκαλία", hours: 4 },
+        { name: "Νεοελληνική Γλώσσα και Γραμματεία: Νεοελληνική Λογοτεχνία", hours: 2 },
+        { name: "Αρχαία Ελληνική Γλώσσα και Γραμματεία: Αρχαία Ελληνική Γλώσσα", hours: 2 },
+        { name: "Αρχαία Ελληνική Γλώσσα και Γραμματεία: Αρχαία Ελληνικά Κείμενα από Μετάφραση", hours: 2 },
         { name: "Μαθηματικά", hours: 4 },
         { name: "Φυσική", hours: 1 },
         { name: "Βιολογία", hours: 1 },
@@ -17,8 +30,7 @@ const eaeGimnasioData = {
         { name: "Ιστορία", hours: 2 },
         { name: "Θρησκευτικά", hours: 2 },
         { name: "Αγγλικά", hours: 2 },
-        { name: "2η Ξένη Γλώσσα*", hours: 2 },
-        { name: "Οικιακή Οικονομία", hours: 1 },
+        { name: "Οικιακή Οικονομία", hours: 2 },
         { name: "Φυσική Αγωγή", hours: 2 },
         { name: "Τεχνολογία", hours: 1 },
         { name: "Πληροφορική", hours: 2 },
@@ -28,14 +40,13 @@ const eaeGimnasioData = {
       ]
     }
   },
-
   classB: {
     subjects: {
       core: [
-        { name: "Γλωσσική Διδασκαλία", hours: 2 },
-        { name: "Νεοελληνική Λογοτεχνία", hours: 2 },
-        { name: "Αρχαία Ελληνική Γλώσσα", hours: 2 },
-        { name: "Αρχαία Ελληνικά Κείμενα από Μετάφραση", hours: 2 },
+        { name: "Νεοελληνική Γλώσσα και Γραμματεία: Γλωσσική Διδασκαλία", hours: 4 },
+        { name: "Νεοελληνική Γλώσσα και Γραμματεία: Νεοελληνική Λογοτεχνία", hours: 2 },
+        { name: "Αρχαία Ελληνική Γλώσσα και Γραμματεία: Αρχαία Ελληνική Γλώσσα", hours: 2 },
+        { name: "Αρχαία Ελληνική Γλώσσα και Γραμματεία: Αρχαία Ελληνικά Κείμενα από Μετάφραση", hours: 2 },
         { name: "Μαθηματικά", hours: 4 },
         { name: "Φυσική", hours: 2 },
         { name: "Χημεία", hours: 1 },
@@ -44,23 +55,22 @@ const eaeGimnasioData = {
         { name: "Ιστορία", hours: 2 },
         { name: "Θρησκευτικά", hours: 2 },
         { name: "Αγγλικά", hours: 2 },
-        { name: "2η Ξένη Γλώσσα*", hours: 2 },
         { name: "Φυσική Αγωγή", hours: 2 },
-        { name: "Τεχνολογία", hours: 1 },
-        { name: "Πληροφορική", hours: 1 },
-        { name: "Μουσική", hours: 1 },
-        { name: "Καλλιτεχνικά", hours: 1 },
-        { name: "Εργαστήριο Δεξιοτήτων", hours: 1 }
+        { name: "Τεχνολογία και Πληροφορική: Τεχνολογία", hours: 1 },
+        { name: "Τεχνολογία και Πληροφορική: Πληροφορική", hours: 1 },
+        { name: "Πολιτισμός και Δραστηριότητες: Μουσική", hours: 1 },
+        { name: "Πολιτισμός και Δραστηριότητες: Καλλιτεχνικά", hours: 1 },
+        { name: "Πολιτισμός και Δραστηριότητες: Εργαστήριο Δεξιοτήτων", hours: 1 }
       ]
     }
   },
   classC: {
     subjects: {
       core: [
-        { name: "Γλωσσική Διδασκαλία", hours: 2 },
-        { name: "Νεοελληνική Λογοτεχνία", hours: 2 },
-        { name: "Αρχαία Ελληνική Γλώσσα", hours: 2 },
-        { name: "Αρχαία Ελληνικά Κείμενα από Μετάφραση", hours: 2 },
+        { name: "Νεοελληνική Γλώσσα και Γραμματεία: Γλωσσική Διδασκαλία", hours: 4 },
+        { name: "Νεοελληνική Γλώσσα και Γραμματεία: Νεοελληνική Λογοτεχνία", hours: 2 },
+        { name: "Αρχαία Ελληνική Γλώσσα και Γραμματεία: Αρχαία Ελληνική Γλώσσα", hours: 2 },
+        { name: "Αρχαία Ελληνική Γλώσσα και Γραμματεία: Αρχαία Ελληνικά Κείμενα από Μετάφραση", hours: 2 },
         { name: "Μαθηματικά", hours: 4 },
         { name: "Φυσική", hours: 2 },
         { name: "Χημεία", hours: 1 },
@@ -68,14 +78,13 @@ const eaeGimnasioData = {
         { name: "Ιστορία", hours: 2 },
         { name: "Θρησκευτικά", hours: 2 },
         { name: "Αγγλικά", hours: 2 },
-        { name: "2η Ξένη Γλώσσα*", hours: 2 },
         { name: "Κοινωνική και Πολιτική Αγωγή", hours: 3 },
         { name: "Φυσική Αγωγή", hours: 2 },
-        { name: "Τεχνολογία", hours: 1 },
-        { name: "Πληροφορική", hours: 1 },
-        { name: "Μουσική", hours: 1 },
-        { name: "Καλλιτεχνικά", hours: 1 },
-        { name: "Εργαστήριο Δεξιοτήτων", hours: 1 }
+        { name: "Τεχνολογία και Πληροφορική: Τεχνολογία", hours: 1 },
+        { name: "Τεχνολογία και Πληροφορική: Πληροφορική", hours: 1 },
+        { name: "Πολιτισμός και Δραστηριότητες: Μουσική", hours: 1 },
+        { name: "Πολιτισμός και Δραστηριότητες: Καλλιτεχνικά", hours: 1 },
+        { name: "Πολιτισμός και Δραστηριότητες: Εργαστήριο Δεξιοτήτων", hours: 1 }
       ]
     }
   },
@@ -87,6 +96,7 @@ export default function EAEGimnasio() {
 
   // Define tabs as data
   const tabs = [
+    { id: 'Pre', label: 'Τάξη Προκ.\'' },
     { id: 'A', label: 'Τάξη Α\'' },
     { id: 'B', label: 'Τάξη Β\'' },
     { id: 'C', label: 'Τάξη Γ\'' }
@@ -97,22 +107,31 @@ export default function EAEGimnasio() {
       <h1 className="text-2xl font-bold mb-4">Ωρολόγιο Πρόγραμμα EAE Γυμνάσιο</h1>
 
       {/* Tab Navigation */}
-      <TabNavigation 
-        activeTab={activeTab} 
-        onTabChange={setActiveTab} 
-        tabs={tabs} 
+      <TabNavigation
+        activeTab={activeTab}
+        onTabChange={setActiveTab}
+        tabs={tabs}
       />
 
       {/* Content based on active tab */}
+
+      {activeTab === 'Pre' && (
+        <section>
+          <h2 className="text-xl font-semibold mb-4">Μαθήματα Προκαταρκτικής Τάξης</h2>
+          <div className="overflow-x-auto mb-4">
+            <ClassTable data={eaeGimnasioData.preliminary.subjects.core} />
+          </div>
+        
+        </section>
+      )} 
+
       {activeTab === 'A' && (
         <section>
           <h2 className="text-xl font-semibold mb-4">Μαθήματα Γενικής Παιδείας Α' Τάξης</h2>
           <div className="overflow-x-auto mb-4">
             <ClassTable data={eaeGimnasioData.classA.subjects.core} />
           </div>
-          <p className="text-sm text-gray-600">
-            * Η 2η ξένη γλώσσα επιλέγεται μεταξύ Γαλλικών, Γερμανικών και Ιταλικών.
-          </p>
+        
         </section>
       )}
 
@@ -122,9 +141,7 @@ export default function EAEGimnasio() {
           <div className="overflow-x-auto mb-4">
             <ClassTable data={eaeGimnasioData.classB.subjects.core} />
           </div>
-          <p className="text-sm text-gray-600">
-            * Η 2η ξένη γλώσσα επιλέγεται μεταξύ Γαλλικών, Γερμανικών και Ιταλικών.
-          </p>
+          
         </section>
       )}
 
@@ -134,9 +151,7 @@ export default function EAEGimnasio() {
           <div className="overflow-x-auto mb-4">
             <ClassTable data={eaeGimnasioData.classC.subjects.core} />
           </div>
-          <p className="text-sm text-gray-600">
-            * Η 2η ξένη γλώσσα επιλέγεται μεταξύ Γαλλικών, Γερμανικών και Ιταλικών.
-          </p>
+         
         </section>
       )}
     </div>

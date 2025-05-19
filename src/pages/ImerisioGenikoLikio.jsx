@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ClassTable from '../components/ClassTable.jsx'
+import TabNavigation from '../components/TabNavigation';
 
 
 const imerisioGenikoLikioData = {
@@ -42,13 +43,13 @@ const imerisioGenikoLikioData = {
         { name: "Φυσική Αγωγή", hours: 2 }
       ],
       orientationGroupA: [
-          { name: "Αρχαία Ελληνική Γλώσσα και Γραμματεία", hours: 3 },
-          { name: "Λατινικά", hours: 2 }
-        ],
+        { name: "Αρχαία Ελληνική Γλώσσα και Γραμματεία", hours: 3 },
+        { name: "Λατινικά", hours: 2 }
+      ],
       orientationGroupB: [
-          { name: "Φυσική", hours: 2 },
-          { name: "Μαθηματικά", hours: 3 }
-        ]
+        { name: "Φυσική", hours: 2 },
+        { name: "Μαθηματικά", hours: 3 }
+      ]
     }
   }
 
@@ -148,86 +149,118 @@ const orientationGroupsC = {
 };
 
 export default function ImerisioGenikoLikio() {
+  const [activeTab, setActiveTab] = useState('A');
+
+  // Define tabs as data
+  const tabs = [
+    { id: 'A', label: 'Τάξη Α\'' },
+    { id: 'B', label: 'Τάξη Β\'' },
+    { id: 'C', label: 'Τάξη Γ\'' }
+  ];
 
   return (
     <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Ημερήσιο Γενικό Λύκειο</h1>
+      <h1 className="text-2xl font-bold mb-4">Ωρολόγιο Πρόγραμμα Ημερήσιο Γενικό Λύκειο</h1>
 
-      {/* Class A Table */}
-      <h2 className="text-xl font-semibold mb-4">Ωρολόγιο Πρόγραμμα Α' Τάξης</h2>
-      <h3 className='text-lg font-semibold mb-2'>Μαθήματα Γενικής Παιδείας</h3>
-      <div className="overflow-x-auto mb-8">
-        <ClassTable data={coreSubjectsA} />
-      </div>
 
-      {/* Class B Table */}
-      <h2 className="text-xl font-semibold mb-4">Ωρολόγιο Πρόγραμμα Β' Τάξης</h2>
-      <h3 className='text-lg font-semibold mb-2'>Μαθήματα Γενικής Παιδείας</h3>
-      <div className="overflow-x-auto mb-8">
-        <ClassTable data={coreSubjectsB} />
-      </div>
+      {/* Using the abstracted TabNavigation component */}
+      <TabNavigation
+        activeTab={activeTab}
+        onTabChange={setActiveTab}
+        tabs={tabs}
+      />
 
-      {/* Orientation Groups Tables - Side by Side */}
-      <h2 className="text-xl font-semibold mb-4">Μαθήματα Ομάδων Προσανατολισμού Β' Τάξης</h2>
-      <p className='mb-2'>Στη Β Λυκείου διαμορφώνονται δύο Ομάδες Προσανατολισμού: η Ομάδα Ανθρωπιστικών Σπουδών και η Ομάδα Θετικών Σπουδών</p>
-      <div className="flex flex-wrap">
-        {/* Humanities Orientation Group */}
-        <div className="w-full md:w-1/2 pr-0 md:pr-2 mb-4 md:mb-0">
-          <h3 className="text-lg font-semibold mb-2">{orientationGroupsB.humanities.name}</h3>
-          <ClassTable data={orientationGroupsB.humanities.subjects} footerLabel="Σύνολο Προγράμματος Ομάδας Προσανατολισμού" />
-        </div>
+      {/* Content based on active tab */}
+      {activeTab === 'A' && (
+        <section>
+          <h2 className="text-xl font-semibold mb-4">Μαθήματα Γενικής Παιδείας Α' Τάξης</h2>
+          <div className="overflow-x-auto mb-4">
+            <ClassTable data={coreSubjectsA} />
+          </div>
+        </section>
+      )}
 
-        {/* Science Orientation Group */}
-        <div className="w-full md:w-1/2 pl-0 md:pl-2">
-          <h3 className="text-lg font-semibold mb-2">{orientationGroupsB.science.name}</h3>
-          <ClassTable data={orientationGroupsB.science.subjects} footerLabel="Σύνολο Προγράμματος Ομάδας Προσανατολισμού" />
-        </div>
-      </div>
+      {activeTab === 'B' && (
+        <section>
 
-      <p className="mt-4 text-sm text-gray-600">
-        * Η 2η ξένη γλώσσα επιλέγεται μεταξύ Γαλλικών, Γερμανικών και Ιταλικών.
-      </p>
+          <h2 className="text-xl font-semibold mb-4">Μαθήματα Γενικής Παιδείας Β' Τάξης</h2>
+          <div className="overflow-x-auto mb-4">
+            <ClassTable data={coreSubjectsB} />
+          </div>
 
-      {/* Class C Table */}
-      <h2 className="text-xl font-semibold mb-4 mt-8">Ωρολόγιο Πρόγραμμα Γ' Τάξης</h2>
-      <h3 className='text-lg font-semibold mb-2'>Μαθήματα Γενικής Παιδείας</h3>
-      <div className="overflow-x-auto mb-8">
-        <ClassTable data={coreSubjectsC} />
-      </div>
+          <h2 className="text-xl font-semibold mb-4">Μαθήματα Ομάδων Προσανατολισμού Β' Τάξης</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h3 className='text-lg text-amber-700 font-semibold mb-4'>Ανθρωπιστικών Σπουδών</h3>
+              <div className="overflow-x-auto">
+                <ClassTable data={orientationGroupsB.humanities.subjects} />
+              </div>
+            </div>
 
-      {/* Orientation Groups Tables for Class C */}
-      <h2 className="text-xl font-semibold mb-4">Μαθήματα Ομάδων Προσανατολισμού Γ' Τάξης</h2>
-      <p className='mb-2'>Στη Γ' Λυκείου διαμορφώνονται τρεις Ομάδες Προσανατολισμού: η Ομάδα Ανθρωπιστικών Σπουδών, η Ομάδα Θετικών Σπουδών και Σπουδών Υγείας, και η Ομάδα Σπουδών Οικονομίας και Πληροφορικής</p>
+            <div>
+              <h3 className='text-lg text-amber-700 font-semibold mb-4'>Θετικών Σπουδών</h3>
+              <div className="overflow-x-auto">
+                <ClassTable data={orientationGroupsB.science.subjects} />
+              </div>
+            </div>
+          </div>
 
-      {/* First row - First two orientation groups */}
-      <div className="flex flex-wrap mb-8">
-        {/* Humanities Orientation Group */}
-        <div className="w-full md:w-1/2 pr-0 md:pr-2 mb-4 md:mb-0">
-          <h3 className="text-lg font-semibold mb-2">{orientationGroupsC.humanities.name}</h3>
-          <ClassTable data={orientationGroupsC.humanities.subjects} footerLabel="Σύνολο Προγράμματος Ομάδας Προσανατολισμού" />
-        </div>
+        </section>
+      )}
 
-        {/* Science Orientation Group */}
-        <div className="w-full md:w-1/2 pl-0 md:pl-2">
-          <h3 className="text-lg font-semibold mb-2">{orientationGroupsC.science.name}</h3>
-          <ClassTable data={orientationGroupsC.science.subjects} footerLabel="Σύνολο Προγράμματος Ομάδας Προσανατολισμού" />
-        </div>
-      </div>
+      {activeTab === 'C' && (
+        <section>
+          <h2 className="text-xl font-semibold mb-4">Μαθήματα Γενικής Παιδείας Γ' Τάξης</h2>
+          <div className="overflow-x-auto mb-4">
+            <ClassTable data={coreSubjectsC} />
+          </div>
 
-      {/* Second row - Economics Orientation Group (centered) */}
-      <div className="flex justify-center mb-8">
-        <div className="w-full md:w-1/2">
-          <h3 className="text-lg font-semibold mb-2">{orientationGroupsC.economics.name}</h3>
-          <ClassTable data={orientationGroupsC.economics.subjects} footerLabel="Σύνολο Προγράμματος Ομάδας Προσανατολισμού" />
-        </div>
-      </div>
+          <div className="text-sm text-gray-600">
+            <p className="mb-2">* Ιστορία διδάσκονται οι μαθητές/μαθήτριες που επιλέγουν την Ομάδα Προσανατολισμού "Θετικών Σπουδών και Σπουδών Υγείας" ή την Ομάδα Προσανατολισμού "Σπουδών Οικονομίας και Πληροφορικής". Μαθηματικά διδάσκονται οι μαθητές/μαθήτριες που επιλέγουν την Ομάδα Προσανατολισμού "Ανθρωπιστικών Σπουδών".</p>
+            <p className="mb-2">* Μαθηματικά για τους/τις μαθητές/μαθήτριες που επιλέγουν το 2ο Επιστημονικό Πεδίο ή Βιολογία για τους/τις μαθητές/μαθήτριες που επιλέγουν το 3ο Επιστημονικό Πεδίο.</p>
+            <p>* ΓΠ = Γενικής Παιδείας</p>
+          </div>
 
-      {/* Footnotes */}
-      <div className="mt-4 text-sm text-gray-600">
-        <p className="mb-2">* Ιστορία διδάσκονται οι μαθητές/μαθήτριες που επιλέγουν την Ομάδα Προσανατολισμού "Θετικών Σπουδών και Σπουδών Υγείας" ή την Ομάδα Προσανατολισμού "Σπουδών Οικονομίας και Πληροφορικής". Μαθηματικά διδάσκονται οι μαθητές/μαθήτριες που επιλέγουν την Ομάδα Προσανατολισμού "Ανθρωπιστικών Σπουδών".</p>
-        <p className="mb-2">* Μαθηματικά για τους/τις μαθητές/μαθήτριες που επιλέγουν το 2ο Επιστημονικό Πεδίο ή Βιολογία για τους/τις μαθητές/μαθήτριες που επιλέγουν το 3ο Επιστημονικό Πεδίο.</p>
-        <p>* ΓΠ = Γενικής Παιδείας</p>
-      </div>
+          <h2 className="text-xl font-semibold mb-4">Μαθήματα Ομάδων Προσανατολισμού Γ' Τάξης</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div>
+              <h3 className='text-lg text-amber-700 font-semibold mb-4'>Ανθρωπιστικών Σπουδών</h3>
+              <div className="overflow-x-auto">
+                <ClassTable data={orientationGroupsC.humanities.subjects} />
+              </div>
+            </div>
+
+            <div>
+              <h3 className='text-lg text-amber-700 font-semibold mb-4'>Θετικών Σπουδών και Σπουδών Υγείας</h3>
+              <div className="overflow-x-auto">
+                <ClassTable data={orientationGroupsC.science.subjects} />
+              </div>
+            </div>
+
+            <div>
+              <h3 className='text-lg text-amber-700 font-semibold mb-4'>Σπουδών Οικονομίας και Πληροφορικής</h3>
+              <div className="overflow-x-auto">
+                <ClassTable data={orientationGroupsC.economics.subjects} />
+              </div>
+            </div>
+          </div>
+
+        </section>
+      )}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     </div>
   )
