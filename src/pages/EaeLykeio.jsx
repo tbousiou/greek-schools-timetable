@@ -4,17 +4,29 @@ import TabNavigation from '../components/TabNavigation.jsx';
 
 
 const eaeLykeioData = {
+  preliminary: {
+    subjects: {
+      core: [
+        { name: "Νεοελληνική Γλώσσα και Γραμματεία", hours: 14 },
+        { name: "Μαθηματικά", hours: 5 },
+        { name: "Φυσική ", hours: 3 },
+        { name: "Χημεία ", hours: 2 },
+        { name: "Φυσική Αγωγή", hours: 2 },
+        { name: "Καλλιτεχνική Παιδεία (Καλλιτεχνικά ή Μουσική ή θεατρική Παιδεία) ", hours: 2 },
+        { name: "Υποστηρικτικές", hours: 4 },]
+    }
+  },
   classA: {
     subjects: {
       core: [
-        { name: "Ελληνική Γλώσσα: Αρχαία Ελληνική Γλώσσα και Γραμματεία", hours: 5 },
-        { name: "Ελληνική Γλώσσα: Νεοελληνική Γλώσσα και Λογοτεχνία", hours: 4 },
+        { name: "Ελληνική Γλώσσα: Αρχαία Ελληνική Γλώσσα και Γραμματεία", hours: 4 },
+        { name: "Ελληνική Γλώσσα: Νεοελληνική Γλώσσα και Λογοτεχνία", hours: 5 },
         { name: "Θρησκευτικά", hours: 2 },
         { name: "Ιστορία", hours: 2 },
-        { name: "Μαθηματικά: Άλγεβρα", hours: 3 },
+        { name: "Μαθηματικά: Άλγεβρα", hours: 2 },
         { name: "Μαθηματικά: Γεωμετρία", hours: 2 },
-        { name: "Αγγλικά", hours: 3 },
-        { name: "2η Ξένη Γλώσσα*", hours: 2 },
+        { name: "Αγγλικά", hours: 2 },
+        { name: "2η Ξένη Γλώσσα*", hours: 1 },
         { name: "Φυσικές Επιστήμες: Φυσική", hours: 2 },
         { name: "Φυσικές Επιστήμες: Χημεία", hours: 2 },
         { name: "Φυσικές Επιστήμες: Βιολογία", hours: 2 },
@@ -28,19 +40,19 @@ const eaeLykeioData = {
     subjects: {
       core: [
         { name: "Ελληνική Γλώσσα: Αρχαία Ελληνική Γλώσσα και Γραμματεία", hours: 2 },
-        { name: "Ελληνική Γλώσσα: Νεοελληνική Γλώσσα και Λογοτεχνία", hours: 4 },
-        { name: "Μαθηματικά: Άλγεβρα", hours: 3 },
-        { name: "Μαθηματικά: Γεωμετρία", hours: 2 },
+        { name: "Ελληνική Γλώσσα: Νεοελληνική Γλώσσα και Λογοτεχνία", hours: 5 },
+        { name: "Μαθηματικά: Άλγεβρα", hours: 2 },
+        { name: "Μαθηματικά: Γεωμετρία", hours: 1 },
         { name: "Φυσικές Επιστήμες: Φυσική", hours: 2 },
         { name: "Φυσικές Επιστήμες: Χημεία", hours: 2 },
-        { name: "Φυσικές Επιστήμες: Βιολογία", hours: 2 },
+        { name: "Φυσικές Επιστήμες: Βιολογία", hours: 1 },
         { name: "Εισαγωγή στις Αρχές της Επιστήμης των Η/Υ", hours: 2 },
         { name: "Ιστορία", hours: 2 },
-        { name: "Φιλοσοφία", hours: 2 },
-        { name: "Θρησκευτικά", hours: 2 },
+        { name: "Φιλοσοφία", hours: 1 },
+        { name: "Θρησκευτικά", hours: 1 },
         { name: "Αγγλικά", hours: 2 },
         { name: "2η Ξένη Γλώσσα*", hours: 1 },
-        { name: "Φυσική Αγωγή", hours: 2 }
+        { name: "Φυσική Αγωγή", hours: 3 }
       ],
       humanities: [
         { name: "Αρχαία Ελληνική Γλώσσα και Γραμματεία", hours: 3 },
@@ -87,6 +99,7 @@ export default function EaeLykeio() {
 
   // Define tabs as data
   const tabs = [
+    { id: 'Pre', label: 'Τάξη Προκ.\'' },
     { id: 'A', label: 'Τάξη Α\'' },
     { id: 'B', label: 'Τάξη Β\'' },
     { id: 'C', label: 'Τάξη Γ\'' }
@@ -94,7 +107,7 @@ export default function EaeLykeio() {
 
   return (
     <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Ωρολόγιο Πρόγραμμα Ημερήσιο Γενικό Λύκειο</h1>
+      <h1 className="text-2xl font-bold mb-4">Ωρολόγιο Πρόγραμμα ΕΑΕ Λύκειο</h1>
 
 
       {/* Using the abstracted TabNavigation component */}
@@ -105,6 +118,17 @@ export default function EaeLykeio() {
       />
 
       {/* Content based on active tab */}
+
+      {activeTab === 'Pre' && (
+        <section>
+          <h2 className="text-xl font-semibold mb-4">Μαθήματα Προκαταρκτικής Τάξης</h2>
+          <div className="overflow-x-auto mb-4">
+            <ClassTable data={eaeLykeioData.preliminary.subjects.core} />
+          </div>
+
+        </section>
+      )}
+
       {activeTab === 'A' && (
         <section>
           <h2 className="text-xl font-semibold mb-4">Μαθήματα Γενικής Παιδείας Α' Τάξης</h2>
