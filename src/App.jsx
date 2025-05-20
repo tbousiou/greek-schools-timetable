@@ -6,15 +6,16 @@ import Footer from './components/Footer'
 import Dimotiko from './pages/Dimotiko'
 import Nipiagogio from './pages/Nipiagogio'
 import Home from './pages/Home'
-import ImerisioGimnasio from './pages/ImerisioGimnasio'
-import EsperinoGimnasio from './pages/EsperinoGimnasio'
-import ImerisioGenikoLikio from './pages/ImerisioGenikoLikio'
-import EsperinoGenikoLikio from './pages/EsperinoGenikoLikio'
+import ImerisioGymnasio from './pages/ImerisioGymnasio'
+import EsperinoGymnasio from './pages/EsperinoGymnasio'
+import ImerisioGenikoLykeio from './pages/ImerisioGenikoLykeio'
+import EsperinoGenikoLykeio from './pages/EsperinoGenikoLykeio'
 import ImerisioEPAL from './pages/ImerisioEPAL'
-import EneegylGimnasio from './pages/EneegylGimnasio'
-import EAEGimnasio from './pages/EaeGimnasio'
-import MousikoGimnasio from './pages/MousikoGimnasio'
-import KallitexnikoGimnasio from './pages/KallitexnikoGimnasio'
+import EneegylGymnasio from './pages/EneegylGymnasio'
+import EAEGymnasio from './pages/EaeGymnasio'
+import MousikoGymnasio from './pages/MousikoGymnasio'
+import KallitexnikoGymnasio from './pages/KallitexnikoGymnasio'
+import MousikoLykeio from './pages/MousikoLykeio'
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
@@ -40,15 +41,16 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/dimotiko" element={<Dimotiko />} />
             <Route path="/nipiagogio" element={<Nipiagogio />} />
-            <Route path="/imerisio-gymnasio" element={<ImerisioGimnasio />} />
-            <Route path="/esperino-gymnasio" element={<EsperinoGimnasio />} />
-            <Route path="/imerisio-geniko-lykeio" element={<ImerisioGenikoLikio />} />
-            <Route path="/esperino-geniko-lykeio" element={<EsperinoGenikoLikio />} />
+            <Route path="/imerisio-gymnasio" element={<ImerisioGymnasio />} />
+            <Route path="/esperino-gymnasio" element={<EsperinoGymnasio />} />
+            <Route path="/imerisio-geniko-lykeio" element={<ImerisioGenikoLykeio />} />
+            <Route path="/esperino-geniko-lykeio" element={<EsperinoGenikoLykeio />} />
             <Route path="/imerisio-epal" element={<ImerisioEPAL />} />
-            <Route path="/eneegyl-gymnasio" element={<EneegylGimnasio />} />
-            <Route path="/eae-gymnasio" element={<EAEGimnasio />} />
-            <Route path="/mousiko-gymnasio" element={<MousikoGimnasio />} />
-            <Route path="/kallitexniko-gymnasio" element={<KallitexnikoGimnasio />} />
+            <Route path="/eneegyl-gymnasio" element={<EneegylGymnasio />} />
+            <Route path="/eae-gymnasio" element={<EAEGymnasio />} />
+            <Route path="/mousiko-gymnasio" element={<MousikoGymnasio />} />
+            <Route path="/mousiko-lykeio" element={<MousikoLykeio />} />
+            <Route path="/kallitexniko-gymnasio" element={<KallitexnikoGymnasio />} />
             {/* Add more routes here */}
           </Routes>
         </main>

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import ClassTable from '../components/ClassTable';
 import TabNavigation from '../components/TabNavigation';
 
-const mousikoGimnasioData = {
+const mousikoGymnasioData = {
   classA: {
     subjects: {
       core: [
@@ -105,7 +105,7 @@ const mousikoGimnasioData = {
 }
 
 
-export default function MousikoGimnasio() {
+export default function MousikoGymnasio() {
   const [activeTab, setActiveTab] = useState('A');
 
   // Define tabs as data
@@ -149,14 +149,14 @@ export default function MousikoGimnasio() {
         <section>
           <h2 className="text-xl font-semibold mb-4">Μαθήματα Γενικής Παιδείας Α' Τάξης</h2>
           <div className="overflow-x-auto mb-4">
-            <ClassTable data={mousikoGimnasioData.classA.subjects.core} />
+            <ClassTable data={mousikoGymnasioData.classA.subjects.core} />
           </div>
           
           {notesCore}
 
           <h2 className="text-xl font-semibold mb-4 mt-8">Μαθήματα Μουσικής Παιδείας Α' Τάξης</h2>
           <div className="overflow-x-auto mb-4">
-            <ClassTable data={mousikoGimnasioData.classA.subjects.music} />
+            <ClassTable data={mousikoGymnasioData.classA.subjects.music} />
           </div>
 
           {notesMusic}
@@ -168,14 +168,14 @@ export default function MousikoGimnasio() {
         <section>
           <h2 className="text-xl font-semibold mb-4">Μαθήματα Γενικής Παιδείας Β' Τάξης</h2>
           <div className="overflow-x-auto mb-4">
-            <ClassTable data={mousikoGimnasioData.classB.subjects.core} />
+            <ClassTable data={mousikoGymnasioData.classB.subjects.core} />
           </div>
           
           {notesCore}
 
           <h2 className="text-xl font-semibold mb-4 mt-8">Μαθήματα Μουσικής Παιδείας Β' Τάξης</h2>
           <div className="overflow-x-auto mb-4">
-            <ClassTable data={mousikoGimnasioData.classB.subjects.music} />
+            <ClassTable data={mousikoGymnasioData.classB.subjects.music} />
           </div>
           
           {notesMusic}
@@ -187,14 +187,14 @@ export default function MousikoGimnasio() {
         <section>
           <h2 className="text-xl font-semibold mb-4">Μαθήματα Γενικής Παιδείας Γ' Τάξης</h2>
           <div className="overflow-x-auto mb-4">
-            <ClassTable data={mousikoGimnasioData.classC.subjects.core} />
+            <ClassTable data={mousikoGymnasioData.classC.subjects.core} />
           </div>
           
           {notesCore}
 
           <h2 className="text-xl font-semibold mb-4 mt-8">Μαθήματα Μουσικής Παιδείας Γ' Τάξης</h2>
           <div className="overflow-x-auto mb-4">
-            <ClassTable data={mousikoGimnasioData.classC.subjects.music} />
+            <ClassTable data={mousikoGymnasioData.classC.subjects.music} />
           </div>
 
           {notesMusic}

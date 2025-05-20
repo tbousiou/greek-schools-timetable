@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import ClassTable from '../components/ClassTable';
 import TabNavigation from '../components/TabNavigation';
 
-const esperinoGimnasioData = {
+const esperinoGymnasioData = {
   classA: {
     subjects: {
       core: [
@@ -67,7 +67,7 @@ const esperinoGimnasioData = {
 
 
 
-export default function EsperinoGimnasio() {
+export default function EsperinoGymnasio() {
   const [activeTab, setActiveTab] = useState('A');
 
   // Define tabs as data
@@ -94,7 +94,7 @@ export default function EsperinoGimnasio() {
         <section>
           <h2 className="text-xl font-semibold mb-4">Μαθήματα Γενικής Παιδείας Α' Τάξης</h2>
           <div className="overflow-x-auto mb-4">
-            <ClassTable data={esperinoGimnasioData.classA.subjects.core} />
+            <ClassTable data={esperinoGymnasioData.classA.subjects.core} />
           </div>
           <p className="text-sm text-gray-600">
             * Η 2η ξένη γλώσσα επιλέγεται μεταξύ Γαλλικών, Γερμανικών και Ιταλικών.
@@ -106,7 +106,7 @@ export default function EsperinoGimnasio() {
         <section>
           <h2 className="text-xl font-semibold mb-4">Μαθήματα Γενικής Παιδείας Β' Τάξης</h2>
           <div className="overflow-x-auto mb-4">
-            <ClassTable data={esperinoGimnasioData.classB.subjects.core} />
+            <ClassTable data={esperinoGymnasioData.classB.subjects.core} />
           </div>
           <p className="text-sm text-gray-600">
             * Η 2η ξένη γλώσσα επιλέγεται μεταξύ Γαλλικών, Γερμανικών και Ιταλικών.
@@ -118,7 +118,7 @@ export default function EsperinoGimnasio() {
         <section>
           <h2 className="text-xl font-semibold mb-4">Μαθήματα Γενικής Παιδείας Γ' Τάξης</h2>
           <div className="overflow-x-auto mb-4">
-            <ClassTable data={esperinoGimnasioData.classC.subjects.core} />
+            <ClassTable data={esperinoGymnasioData.classC.subjects.core} />
           </div>
           <p className="text-sm text-gray-600">
             * Η 2η ξένη γλώσσα επιλέγεται μεταξύ Γαλλικών, Γερμανικών και Ιταλικών.

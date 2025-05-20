@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import ClassTable from '../components/ClassTable';
 import TabNavigation from '../components/TabNavigation';
 
-const kallitexnikoGimnasioData = {
+const kallitexnikoGymnasioData = {
   classA: {
     subjects: {
       core: [
@@ -144,7 +144,7 @@ const kallitexnikoGimnasioData = {
 }
 
 
-export default function KallitexnikoGimnasio() {
+export default function KallitexnikoGymnasio() {
   const [activeTab, setActiveTab] = useState('A');
 
   // Define tabs as data
@@ -171,7 +171,7 @@ export default function KallitexnikoGimnasio() {
         <section>
           <h2 className="text-xl font-semibold mb-4">Μαθήματα Γενικής Παιδείας Α' Τάξης</h2>
           <div className="overflow-x-auto mb-4">
-            <ClassTable data={kallitexnikoGimnasioData.classA.subjects.core} />
+            <ClassTable data={kallitexnikoGymnasioData.classA.subjects.core} />
           </div>
 
           <h2 className="text-xl font-semibold mb-4">Μαθήματα Καλλιτεχνικής Παιδείας Α' Τάξης</h2>
@@ -181,21 +181,21 @@ export default function KallitexnikoGimnasio() {
             <div>
               <h3 className='text-lg text-amber-700 font-semibold mb-4'>Κατεύθυνση Εικαστικών Τεχνών</h3>
               <div className="overflow-x-auto">
-                <ClassTable data={kallitexnikoGimnasioData.classA.subjects.art} />
+                <ClassTable data={kallitexnikoGymnasioData.classA.subjects.art} />
               </div>
             </div>
 
             <div>
               <h3 className='text-lg text-amber-700 font-semibold mb-4'>Κατεύθυνση Θεάτρου - Κινηματογράφου</h3>
               <div className="overflow-x-auto">
-                <ClassTable data={kallitexnikoGimnasioData.classA.subjects.theatre} />
+                <ClassTable data={kallitexnikoGymnasioData.classA.subjects.theatre} />
               </div>
             </div>
 
             <div>
               <h3 className='text-lg text-amber-700 font-semibold mb-4'>Κατεύθυνση Χορού</h3>
               <div className="overflow-x-auto">
-                <ClassTable data={kallitexnikoGimnasioData.classA.subjects.dance} />
+                <ClassTable data={kallitexnikoGymnasioData.classA.subjects.dance} />
               </div>
             </div>
           </div>
@@ -207,7 +207,7 @@ export default function KallitexnikoGimnasio() {
         <section>
           <h2 className="text-xl font-semibold mb-4">Μαθήματα Γενικής Παιδείας Β' Τάξης</h2>
           <div className="overflow-x-auto mb-4">
-            <ClassTable data={kallitexnikoGimnasioData.classB.subjects.core} />
+            <ClassTable data={kallitexnikoGymnasioData.classB.subjects.core} />
           </div>
           <h2 className="text-xl font-semibold mb-4">Μαθήματα Καλλιτεχνικής Παιδείας Β' Τάξης</h2>
 
@@ -215,21 +215,21 @@ export default function KallitexnikoGimnasio() {
             <div>
               <h3 className='text-lg text-amber-700 font-semibold mb-4'>Κατεύθυνση Εικαστικών Τεχνών</h3>
               <div className="overflow-x-auto">
-                <ClassTable data={kallitexnikoGimnasioData.classB.subjects.art} />
+                <ClassTable data={kallitexnikoGymnasioData.classB.subjects.art} />
               </div>
             </div>
 
             <div>
               <h3 className='text-lg text-amber-700 font-semibold mb-4'>Κατεύθυνση Θεάτρου - Κινηματογράφου</h3>
               <div className="overflow-x-auto">
-                <ClassTable data={kallitexnikoGimnasioData.classB.subjects.theatre} />
+                <ClassTable data={kallitexnikoGymnasioData.classB.subjects.theatre} />
               </div>
             </div>
 
             <div>
               <h3 className='text-lg text-amber-700 font-semibold mb-4'>Κατεύθυνση Χορού</h3>
               <div className="overflow-x-auto">
-                <ClassTable data={kallitexnikoGimnasioData.classB.subjects.dance} />
+                <ClassTable data={kallitexnikoGymnasioData.classB.subjects.dance} />
               </div>
             </div>
           </div>
@@ -240,7 +240,7 @@ export default function KallitexnikoGimnasio() {
         <section>
           <h2 className="text-xl font-semibold mb-4">Μαθήματα Γενικής Παιδείας Γ' Τάξης</h2>
           <div className="overflow-x-auto mb-4">
-            <ClassTable data={kallitexnikoGimnasioData.classC.subjects.core} />
+            <ClassTable data={kallitexnikoGymnasioData.classC.subjects.core} />
           </div>
 
           <h2 className="text-xl font-semibold mb-4">Μαθήματα Καλλιτεχνικής Παιδείας Γ' Τάξης</h2>
@@ -249,21 +249,21 @@ export default function KallitexnikoGimnasio() {
             <div>
               <h3 className='text-lg text-amber-700 font-semibold mb-4'>Κατεύθυνση Εικαστικών Τεχνών</h3>
               <div className="overflow-x-auto">
-                <ClassTable data={kallitexnikoGimnasioData.classC.subjects.art} />
+                <ClassTable data={kallitexnikoGymnasioData.classC.subjects.art} />
               </div>
             </div>
 
             <div>
               <h3 className='text-lg text-amber-700 font-semibold mb-4'>Κατεύθυνση Θεάτρου - Κινηματογράφου</h3>
               <div className="overflow-x-auto">
-                <ClassTable data={kallitexnikoGimnasioData.classC.subjects.theatre} />
+                <ClassTable data={kallitexnikoGymnasioData.classC.subjects.theatre} />
               </div>
             </div>
 
             <div>
               <h3 className='text-lg text-amber-700 font-semibold mb-4'>Κατεύθυνση Χορού</h3>
               <div className="overflow-x-auto">
-                <ClassTable data={kallitexnikoGimnasioData.classC.subjects.dance} />
+                <ClassTable data={kallitexnikoGymnasioData.classC.subjects.dance} />
               </div>
             </div>
           </div>

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import ClassTable from '../components/ClassTable';
 import TabNavigation from '../components/TabNavigation';
 
-const eneegylGimnasioData = {
+const eneegylGymnasioData = {
   classA: {
     subjects: {
       core: [
@@ -110,7 +110,7 @@ const eneegylGimnasioData = {
 }
 
 
-export default function EneegylGimnasio() {
+export default function EneegylGymnasio() {
   const [activeTab, setActiveTab] = useState('A');
 
   // Define tabs as data
@@ -138,7 +138,7 @@ export default function EneegylGimnasio() {
         <section>
           <h2 className="text-xl font-semibold mb-4">Μαθήματα Γενικής Παιδείας Α' Τάξης</h2>
           <div className="overflow-x-auto mb-4">
-            <ClassTable data={eneegylGimnasioData.classA.subjects.core} />
+            <ClassTable data={eneegylGymnasioData.classA.subjects.core} />
           </div>
           <p className="text-sm text-gray-600">
             * Η 2η ξένη γλώσσα επιλέγεται μεταξύ Γαλλικών, Γερμανικών και Ιταλικών.
@@ -150,7 +150,7 @@ export default function EneegylGimnasio() {
         <section>
           <h2 className="text-xl font-semibold mb-4">Μαθήματα Γενικής Παιδείας Β' Τάξης</h2>
           <div className="overflow-x-auto mb-4">
-            <ClassTable data={eneegylGimnasioData.classB.subjects.core} />
+            <ClassTable data={eneegylGymnasioData.classB.subjects.core} />
           </div>
           <p className="text-sm text-gray-600">
             * Η 2η ξένη γλώσσα επιλέγεται μεταξύ Γαλλικών, Γερμανικών και Ιταλικών.
@@ -162,7 +162,7 @@ export default function EneegylGimnasio() {
         <section>
           <h2 className="text-xl font-semibold mb-4">Μαθήματα Γενικής Παιδείας Γ' Τάξης</h2>
           <div className="overflow-x-auto mb-4">
-            <ClassTable data={eneegylGimnasioData.classC.subjects.core} />
+            <ClassTable data={eneegylGymnasioData.classC.subjects.core} />
           </div>
           <p className="text-sm text-gray-600">
             * Η 2η ξένη γλώσσα επιλέγεται μεταξύ Γαλλικών, Γερμανικών και Ιταλικών.
@@ -174,7 +174,7 @@ export default function EneegylGimnasio() {
         <section>
           <h2 className="text-xl font-semibold mb-4">Μαθήματα Γενικής Παιδείας Δ' Τάξης</h2>
           <div className="overflow-x-auto mb-4">
-            <ClassTable data={eneegylGimnasioData.classD.subjects.core} />
+            <ClassTable data={eneegylGymnasioData.classD.subjects.core} />
           </div>
           <p className="text-sm text-gray-600">
             * Η 2η ξένη γλώσσα επιλέγεται μεταξύ Γαλλικών, Γερμανικών και Ιταλικών.
