@@ -91,7 +91,7 @@ const eaeGymnasioData = {
 }
 
 
-export default function EAEGymnasio() {
+export default function EaeGymnasio() {
   const [activeTab, setActiveTab] = useState('A');
 
   // Define tabs as data
