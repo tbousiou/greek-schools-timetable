@@ -1,100 +1,10 @@
 import React, { useState } from 'react'
 import ClassTable from '../components/ClassTable.jsx'
 import TabNavigation from '../components/TabNavigation.jsx';
+import { eaeLykeioData } from '../data/gelData.js';
 
 
-const eaeLykeioData = {
-  preliminary: {
-    subjects: {
-      core: [
-        { name: "Νεοελληνική Γλώσσα και Γραμματεία", hours: 14 },
-        { name: "Μαθηματικά", hours: 5 },
-        { name: "Φυσική ", hours: 3 },
-        { name: "Χημεία ", hours: 2 },
-        { name: "Φυσική Αγωγή", hours: 2 },
-        { name: "Καλλιτεχνική Παιδεία (Καλλιτεχνικά ή Μουσική ή θεατρική Παιδεία) ", hours: 2 },
-        { name: "Υποστηρικτικές", hours: 4 },]
-    }
-  },
-  classA: {
-    subjects: {
-      core: [
-        { name: "Ελληνική Γλώσσα: Αρχαία Ελληνική Γλώσσα και Γραμματεία", hours: 4 },
-        { name: "Ελληνική Γλώσσα: Νεοελληνική Γλώσσα και Λογοτεχνία", hours: 5 },
-        { name: "Θρησκευτικά", hours: 2 },
-        { name: "Ιστορία", hours: 2 },
-        { name: "Μαθηματικά: Άλγεβρα", hours: 2 },
-        { name: "Μαθηματικά: Γεωμετρία", hours: 2 },
-        { name: "Αγγλικά", hours: 2 },
-        { name: "2η Ξένη Γλώσσα*", hours: 1 },
-        { name: "Φυσικές Επιστήμες: Φυσική", hours: 2 },
-        { name: "Φυσικές Επιστήμες: Χημεία", hours: 2 },
-        { name: "Φυσικές Επιστήμες: Βιολογία", hours: 2 },
-        { name: "Φυσική Αγωγή", hours: 2 },
-        { name: "Πολιτική Παιδεία", hours: 2 },
-        { name: "Εφαρμογές Πληροφορικής", hours: 2 }
-      ]
-    }
-  },
-  classB: {
-    subjects: {
-      core: [
-        { name: "Ελληνική Γλώσσα: Αρχαία Ελληνική Γλώσσα και Γραμματεία", hours: 2 },
-        { name: "Ελληνική Γλώσσα: Νεοελληνική Γλώσσα και Λογοτεχνία", hours: 5 },
-        { name: "Μαθηματικά: Άλγεβρα", hours: 2 },
-        { name: "Μαθηματικά: Γεωμετρία", hours: 1 },
-        { name: "Φυσικές Επιστήμες: Φυσική", hours: 2 },
-        { name: "Φυσικές Επιστήμες: Χημεία", hours: 2 },
-        { name: "Φυσικές Επιστήμες: Βιολογία", hours: 1 },
-        { name: "Εισαγωγή στις Αρχές της Επιστήμης των Η/Υ", hours: 2 },
-        { name: "Ιστορία", hours: 2 },
-        { name: "Φιλοσοφία", hours: 1 },
-        { name: "Θρησκευτικά", hours: 1 },
-        { name: "Αγγλικά", hours: 2 },
-        { name: "2η Ξένη Γλώσσα*", hours: 1 },
-        { name: "Φυσική Αγωγή", hours: 3 }
-      ],
-      humanities: [
-        { name: "Αρχαία Ελληνική Γλώσσα και Γραμματεία", hours: 3 },
-        { name: "Λατινικά", hours: 2 }
-      ],
-      science: [
-        { name: "Φυσική", hours: 2 },
-        { name: "Μαθηματικά", hours: 3 }
-      ]
-    }
-  },
-  classC: {
-    subjects: {
-      core: [
-        { name: "Θρησκευτικά", hours: 1 },
-        { name: "Νεοελληνική Γλώσσα και Λογοτεχνία", hours: 6 },
-        { name: "Ιστορία Γενικής Παιδείας* / Μαθηματικά Γενικής Παιδείας*", hours: 2 },
-        { name: "Αγγλικά", hours: 2 },
-        { name: "Φυσική Αγωγή", hours: 3 }
-      ],
-      humanities: [
-        { name: "Αρχαία Ελληνικά", hours: 6 },
-        { name: "Ιστορία", hours: 6 },
-        { name: "Λατινικά", hours: 6 }
-      ],
-      science: [
-        { name: "Μαθηματικά* / Βιολογία*", hours: 6 },
-        { name: "Φυσική", hours: 6 },
-        { name: "Χημεία", hours: 6 }
-      ],
-      economics: [
-        { name: "Μαθηματικά", hours: 6 },
-        { name: "Πληροφορική", hours: 6 },
-        { name: "Οικονομία", hours: 6 }
-      ]
-    }
-  }
-};
-
-
-
-export default function EaeLykeio() {
+export default function LykeioEae() {
   const [activeTab, setActiveTab] = useState('A');
 
   // Define tabs as data

@@ -13,58 +13,58 @@ const navGroups = [
     {
         title: 'Γυμνάσια',
         items: [
-            { title: 'Ημερήσιο Γυμνάσιο', path: '/imerisio-gymnasio' },
-            { title: 'Εσπερινό Γυμνάσιο', path: '/esperino-gymnasio' },
+            { title: 'Ημερήσιο Γυμνάσιο', path: '/gymnasio-imerisio' },
+            { title: 'Εσπερινό Γυμνάσιο', path: '/gymnasio-esperino' },
         ],
     },
     {
         title: 'Γενικό Λύκειο',
         items: [
-            { title: 'Ημερήσιο Γενικό Λύκειο', path: '/imerisio-geniko-lykeio' },
-            { title: 'Εσπερινό Γενικό Λύκειο', path: '/esperino-geniko-lykeio' },
+            { title: 'Ημερήσιο Γενικό Λύκειο', path: '/geniko-lykeio-imerisio' },
+            { title: 'Εσπερινό Γενικό Λύκειο', path: '/geniko-lykeio-esperino' },
         ],
     },
     {
         title: 'ΕΠΑ.Λ.',
         items: [
-            { title: 'Ημερήσιο ΕΠΑ.Λ.', path: '/imerisio-epal' },
-            { title: 'Εσπερινό ΕΠΑ.Λ.', path: '/esperino-epal' },
-            { title: 'Πρότυπο ΕΠΑ.Λ.', path: '/protypo-epal' },
+            { title: 'Ημερήσιο ΕΠΑ.Λ.', path: '/epal-imerisio' },
+            { title: 'Εσπερινό ΕΠΑ.Λ.', path: '/epal-esperino' },
+            { title: 'Πρότυπο ΕΠΑ.Λ.', path: '/epal-protypo' },
         ],
     },
     {
         title: 'ΕΝΕΕΓΥΛ',
         items: [
-            { title: 'Γυμνάσιο', path: '/eneegyl-gymnasio' },
-            { title: 'Λύκειο', path: '/eneegyl-lykeio' },
+            { title: 'Γυμνάσιο', path: '/gymnasio-eneegyl' },
+            { title: 'Λύκειο', path: '/lykeio-eneegyl' },
         ],
     },
-     {
+    {
         title: 'EAE',
         items: [
-            { title: 'Γυμνάσιο', path: '/eae-gymnasio' },
-            { title: 'Λύκειο', path: '/eae-lykeio' },
+            { title: 'Γυμνάσιο', path: '/gymnasio-eae' },
+            { title: 'Λύκειο', path: '/lykeio-eae' },
         ],
     },
     {
         title: 'Μουσικά',
         items: [
-            { title: 'Γυμνάσιο', path: '/mousiko-gymnasio' },
-            { title: 'Λύκειο', path: '/mousiko-lykeio' },
+            { title: 'Γυμνάσιο', path: '/gymnasio-mousiko' },
+            { title: 'Λύκειο', path: '/lykeio-mousiko' },
         ],
     },
     {
         title: 'Καλλιτεχνικά',
         items: [
-            { title: 'Γυμνάσιο', path: '/kallitexniko-gymnasio' },
-            { title: 'Λύκειο', path: '/kallitexniko-lykeio' },
+            { title: 'Γυμνάσιο', path: '/gymnasio-kallitexniko' },
+            { title: 'Λύκειο', path: '/lykeio-kallitexniko' },
         ],
     },
 ]
 
 function Sidebar({ sidebarOpen, toggleSidebar }) {
     const [expandedGroups, setExpandedGroups] = useState({});
-    
+
     const toggleGroup = (groupIndex) => {
         setExpandedGroups(prev => ({
             ...prev,
@@ -100,7 +100,7 @@ function Sidebar({ sidebarOpen, toggleSidebar }) {
                     <ul className="space-y-4">
                         {navGroups.map((group, groupIndex) => (
                             <li key={groupIndex}>
-                                <button 
+                                <button
                                     onClick={() => toggleGroup(groupIndex)}
                                     className="flex items-center justify-between w-full text-left text-lg font-semibold text-gray-300 mb-2 hover:text-white"
                                 >
@@ -111,12 +111,11 @@ function Sidebar({ sidebarOpen, toggleSidebar }) {
                                         <ChevronRight size={18} />
                                     )}
                                 </button>
-                                <ul 
-                                    className={`space-y-2 overflow-hidden transition-all duration-300 ${
-                                        expandedGroups[groupIndex] 
-                                        ? 'max-h-40 opacity-100 mt-2' 
-                                        : 'max-h-0 opacity-0'
-                                    }`}
+                                <ul
+                                    className={`space-y-2 overflow-hidden transition-all duration-300 ${expandedGroups[groupIndex]
+                                            ? 'max-h-40 opacity-100 mt-2'
+                                            : 'max-h-0 opacity-0'
+                                        }`}
                                 >
                                     {group.items.map((item, itemIndex) => (
                                         <li key={itemIndex}>

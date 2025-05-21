@@ -3,24 +3,32 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Sidebar from './components/Sidebar'
 import Header from './components/Header'
 import Footer from './components/Footer'
+
+import Home from './pages/Home'
+
 import Dimotiko from './pages/Dimotiko'
 import Nipiagogio from './pages/Nipiagogio'
-import Home from './pages/Home'
-import ImerisioGymnasio from './pages/ImerisioGymnasio'
-import EsperinoGymnasio from './pages/EsperinoGymnasio'
-import ImerisioGenikoLykeio from './pages/ImerisioGenikoLykeio'
-import EsperinoGenikoLykeio from './pages/EsperinoGenikoLykeio'
-import ImerisioEPAL from './pages/ImerisioEPAL'
-import EsperinoEPAL from './pages/EsperinoEPAL'
-import ProtypoEPAL from './pages/ProtypoEPAL'
-import EneegylGymnasio from './pages/EneegylGymnasio'
-import EneegylLykeio from './pages/EneegylLykeio'
-import EaeGymnasio from './pages/EaeGymnasio'
-import EaeLykeio from './pages/EaeLykeio'
-import MousikoGymnasio from './pages/MousikoGymnasio'
-import MousikoLykeio from './pages/MousikoLykeio'
-import KallitexnikoGymnasio from './pages/KallitexnikoGymnasio'
-import KallitexnikoLykeio from './pages/KallitexnikoLykeio'
+
+import GymnasioImerirsio from './pages/GymnasioImerisio'
+import GymnasioEsperino from './pages/GymnasioEsperino'
+
+import LykeioImerisio from './pages/LykeioImerisio'
+import LykeioEsperino from './pages/LykeioEsperino'
+
+import EpalImerisio from './pages/EpalImerisio'
+import EpalEsperino from './pages/EpalEsperino'
+import EpalProtypo from './pages/EpalProtypo'
+
+import GymnasioEneegyl from './pages/GymnasioEneegyl'
+import LykeioEneegyl from './pages/LykeioEneegyl'
+
+import GymnasioEae from './pages/GymnasioEae'
+
+import LykeioEae from './pages/LykeioEae'
+import GymnasioMousiko from './pages/GymnasioMousiko'
+import LykeioMousiko from './pages/LykeioMousiko'
+import GymnasioKallitexniko from './pages/GymnasioKallitexniko'
+import LykeioKallitexniko from './pages/LykeioKallitexniko'
 
 
 function App() {
@@ -48,25 +56,25 @@ function App() {
             <Route path="/dimotiko" element={<Dimotiko />} />
             <Route path="/nipiagogio" element={<Nipiagogio />} />
 
-            <Route path="/imerisio-gymnasio" element={<ImerisioGymnasio />} />
-            <Route path="/esperino-gymnasio" element={<EsperinoGymnasio />} />
+            <Route path="/gymnasio-imerisio" element={<GymnasioImerirsio />} />
+            <Route path="/gymnasio-esperino" element={<GymnasioEsperino />} />
 
-            <Route path="/imerisio-geniko-lykeio" element={<ImerisioGenikoLykeio />} />
-            <Route path="/esperino-geniko-lykeio" element={<EsperinoGenikoLykeio />} />
+            <Route path="/geniko-lykeio-imerisio" element={<LykeioImerisio />} />
+            <Route path="/geniko-lykeio-esperino" element={<LykeioEsperino />} />
 
-            <Route path="/imerisio-epal" element={<ImerisioEPAL />} />
-            <Route path="/esperino-epal" element={<EsperinoEPAL />} />
-            <Route path="/protypo-epal" element={<ProtypoEPAL />} />
+            <Route path="/epal-imerisio" element={<EpalImerisio />} />
+            <Route path="/epal-esperino" element={<EpalEsperino />} />
+            <Route path="/epal-protypo" element={<EpalProtypo />} />
 
-            <Route path="/eneegyl-gymnasio" element={<EneegylGymnasio />} />
-            <Route path="/eneegyl-lykeio" element={<EneegylLykeio />} />
-            <Route path="/eae-gymnasio" element={<EaeGymnasio />} />
-            <Route path="/eae-lykeio" element={<EaeLykeio />} />
+            <Route path="/gymnasio-eneegyl" element={<GymnasioEneegyl />} />
+            <Route path="/lykeio-eneegyl" element={<LykeioEneegyl />} />
+            <Route path="/gymnasio-eae" element={<GymnasioEae />} />
+            <Route path="/lykeio-eae" element={<LykeioEae />} />
 
-            <Route path="/mousiko-gymnasio" element={<MousikoGymnasio />} />
-            <Route path="/mousiko-lykeio" element={<MousikoLykeio />} />
-            <Route path="/kallitexniko-gymnasio" element={<KallitexnikoGymnasio />} />
-            <Route path="/kallitexniko-lykeio" element={<KallitexnikoLykeio />} />
+            <Route path="/gymnasio-mousiko" element={<GymnasioMousiko />} />
+            <Route path="/lykeio-mousiko" element={<LykeioMousiko />} />
+            <Route path="/gymnasio-kallitexniko" element={<GymnasioKallitexniko />} />
+            <Route path="/lykeio-kallitexniko" element={<LykeioKallitexniko />} />
             {/* Add more routes here */}
           </Routes>
         </main>
