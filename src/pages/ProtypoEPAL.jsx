@@ -3,7 +3,7 @@ import ClassTable from '../components/ClassTable.jsx'
 import TabNavigation from '../components/TabNavigation.jsx';
 
 
-const imerisioEPALData = {
+const protypoEPALData = {
   classA: {
     subjects: {
       core: [
@@ -266,7 +266,7 @@ const imerisioEPALData = {
 
 
 
-function ImerisioEPAL() {
+function ProtypoEPAL() {
   const [activeTab, setActiveTab] = useState('A');
   const [selectedSector, setSelectedSector] = useState('agricultular');
 
@@ -290,7 +290,7 @@ function ImerisioEPAL() {
 
   return (
     <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Ωρολόγιο Πρόγραμμα Ημερήσιο Επαγγελματικό Λύκειο (ΕΠΑΛ)</h1>
+      <h1 className="text-2xl font-bold mb-4">Ωρολόγιο Πρόγραμμα Πρότυπο Επαγγελματικό Λύκειο (ΕΠΑΛ)</h1>
 
       {/* Using the abstracted TabNavigation component */}
       <TabNavigation
@@ -305,7 +305,7 @@ function ImerisioEPAL() {
 
           <h2 className="text-xl font-semibold mb-4">Μαθήματα Γενικής Παιδείας Α' Τάξης</h2>
           <div className="overflow-x-auto mb-4">
-            <ClassTable data={imerisioEPALData.classA.subjects.core} />
+            <ClassTable data={protypoEPALData.classA.subjects.core} />
           </div>
           <div className="text-sm text-gray-600">
             <p className='mb-2'>
@@ -315,7 +315,7 @@ function ImerisioEPAL() {
 
           <h2 className="text-xl font-semibold mb-4">Μαθήματα Προσανατολισμού Α' Τάξης</h2>
           <div className="overflow-x-auto mb-4">
-            <ClassTable data={imerisioEPALData.classA.subjects.orientation} />
+            <ClassTable data={protypoEPALData.classA.subjects.orientation} />
           </div>
           <div className="text-sm text-gray-600">
             <p className='mb-2'>
@@ -326,7 +326,7 @@ function ImerisioEPAL() {
           <h2 className="text-xl font-semibold mb-4">Μαθήματα Επιλογής Α' Τάξης</h2>
 
           <div className="overflow-x-auto mb-4">
-            <ClassTable data={imerisioEPALData.classA.subjects.optional} />
+            <ClassTable data={protypoEPALData.classA.subjects.optional} />
           </div>
           <div className="text-sm text-gray-600">
             <p className='mb-2'>
@@ -341,7 +341,7 @@ function ImerisioEPAL() {
 
           <h2 className="text-xl font-semibold mb-4">Μαθήματα Γενικής Παιδείας Β' Τάξης</h2>
           <div className="overflow-x-auto mb-4">
-            <ClassTable data={imerisioEPALData.classB.subjects.core} />
+            <ClassTable data={protypoEPALData.classB.subjects.core} />
           </div>
           <div className="text-sm text-gray-600">
             <p className='mb-2'>
@@ -353,8 +353,8 @@ function ImerisioEPAL() {
           <div className="mb-6">
             <p className="mb-3">Επιλέξτε τομέα για να δείτε τα αντίστοιχα μαθήματα:</p>
             <div className="flex flex-wrap gap-2">
-              {Object.keys(imerisioEPALData.classB.subjects.sectors).map((sectorKey) => {
-                const sector = imerisioEPALData.classB.subjects.sectors[sectorKey];
+              {Object.keys(protypoEPALData.classB.subjects.sectors).map((sectorKey) => {
+                const sector = protypoEPALData.classB.subjects.sectors[sectorKey];
                 return (
                   <button
                     key={sectorKey}
@@ -374,10 +374,10 @@ function ImerisioEPAL() {
           {selectedSector && (
             <div className="mt-4">
               <h3 className="text-lg font-medium mb-3">
-                Μαθήματα Τομέα: {imerisioEPALData.classB.subjects.sectors[selectedSector].name}
+                Μαθήματα Τομέα: {protypoEPALData.classB.subjects.sectors[selectedSector].name}
               </h3>
               <div className="overflow-x-auto">
-                <ClassTable data={imerisioEPALData.classB.subjects.sectors[selectedSector].subjects} />
+                <ClassTable data={protypoEPALData.classB.subjects.sectors[selectedSector].subjects} />
               </div>
             </div>
           )}
@@ -389,7 +389,7 @@ function ImerisioEPAL() {
           <p className='text-xl text-red-600 mb-2'>TODO</p>
           <h2 className="text-xl font-semibold mb-4">Μαθήματα Γενικής Παιδείας Γ' Τάξης</h2>
           <div className="overflow-x-auto mb-4">
-            <ClassTable data={imerisioEPALData.classC.subjects.core} />
+            <ClassTable data={protypoEPALData.classC.subjects.core} />
           </div>
 
           <div className="text-sm text-gray-600 mb-4">
@@ -401,8 +401,8 @@ function ImerisioEPAL() {
           <div className="mb-6">
             <p className="mb-3">Επιλέξτε τομέα για να δείτε τα αντίστοιχα μαθήματα:</p>
             <div className="flex flex-wrap gap-2">
-              {Object.keys(imerisioEPALData.classC.subjects.sectors).map((sectorKey) => {
-                const sector = imerisioEPALData.classC.subjects.sectors[sectorKey];
+              {Object.keys(protypoEPALData.classC.subjects.sectors).map((sectorKey) => {
+                const sector = protypoEPALData.classC.subjects.sectors[sectorKey];
                 return (
                   <button
                     key={sectorKey}
@@ -422,10 +422,10 @@ function ImerisioEPAL() {
           {selectedSector && (
             <div className="mt-4">
               <h3 className="text-lg font-medium mb-3">
-                Μαθήματα Τομέα: {imerisioEPALData.classC.subjects.sectors[selectedSector].name}
+                Μαθήματα Τομέα: {protypoEPALData.classC.subjects.sectors[selectedSector].name}
               </h3>
               <div className="overflow-x-auto">
-                <ClassTable data={imerisioEPALData.classC.subjects.sectors[selectedSector].subjects} />
+                <ClassTable data={protypoEPALData.classC.subjects.sectors[selectedSector].subjects} />
               </div>
             </div>
           )}
@@ -438,4 +438,4 @@ function ImerisioEPAL() {
 
 }
 
-export default ImerisioEPAL
+export default ProtypoEPAL

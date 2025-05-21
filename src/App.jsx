@@ -11,6 +11,8 @@ import EsperinoGymnasio from './pages/EsperinoGymnasio'
 import ImerisioGenikoLykeio from './pages/ImerisioGenikoLykeio'
 import EsperinoGenikoLykeio from './pages/EsperinoGenikoLykeio'
 import ImerisioEPAL from './pages/ImerisioEPAL'
+import EsperinoEPAL from './pages/EsperinoEPAL'
+import ProtypoEPAL from './pages/ProtypoEPAL'
 import EneegylGymnasio from './pages/EneegylGymnasio'
 import EneegylLykeio from './pages/EneegylLykeio'
 import EaeGymnasio from './pages/EaeGymnasio'
@@ -45,15 +47,22 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/dimotiko" element={<Dimotiko />} />
             <Route path="/nipiagogio" element={<Nipiagogio />} />
+
             <Route path="/imerisio-gymnasio" element={<ImerisioGymnasio />} />
             <Route path="/esperino-gymnasio" element={<EsperinoGymnasio />} />
+
             <Route path="/imerisio-geniko-lykeio" element={<ImerisioGenikoLykeio />} />
             <Route path="/esperino-geniko-lykeio" element={<EsperinoGenikoLykeio />} />
+
             <Route path="/imerisio-epal" element={<ImerisioEPAL />} />
+            <Route path="/esperino-epal" element={<EsperinoEPAL />} />
+            <Route path="/protypo-epal" element={<ProtypoEPAL />} />
+
             <Route path="/eneegyl-gymnasio" element={<EneegylGymnasio />} />
             <Route path="/eneegyl-lykeio" element={<EneegylLykeio />} />
             <Route path="/eae-gymnasio" element={<EaeGymnasio />} />
             <Route path="/eae-lykeio" element={<EaeLykeio />} />
+
             <Route path="/mousiko-gymnasio" element={<MousikoGymnasio />} />
             <Route path="/mousiko-lykeio" element={<MousikoLykeio />} />
             <Route path="/kallitexniko-gymnasio" element={<KallitexnikoGymnasio />} />
