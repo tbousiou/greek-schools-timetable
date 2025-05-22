@@ -124,16 +124,13 @@ export default function EpalImerisio() {
 
       {activeTab === 'C' && (
         <section>
-          <p className='text-xl text-red-600 mb-2'>TODO</p>
+          
           <h2 className="text-xl font-semibold mb-4">Μαθήματα Γενικής Παιδείας Γ' Τάξης</h2>
           <div className="overflow-x-auto mb-4">
             <ClassTable data={imerisioEPALData.classC.subjects.core} />
           </div>
 
-          <div className="text-sm text-gray-600 mb-4">
-            <p className="mb-2">* Ιστορία διδάσκονται οι μαθητές/μαθήτριες που επιλέγουν την Ομάδα Προσανατολισμού "Θετικών Σπουδών και Σπουδών Υγείας" ή την Ομάδα Προσανατολισμού "Σπουδών Οικονομίας και Πληροφορικής". Μαθηματικά διδάσκονται οι μαθητές/μαθήτριες που επιλέγουν την Ομάδα Προσανατολισμού "Ανθρωπιστικών Σπουδών".</p>
-            <p className="mb-2">* Μαθηματικά για τους/τις μαθητές/μαθήτριες που επιλέγουν το 2ο Επιστημονικό Πεδίο ή Βιολογία για τους/τις μαθητές/μαθήτριες που επιλέγουν το 3ο Επιστημονικό Πεδίο.</p>
-          </div>
+          
 
           <h2 className="text-xl font-semibold mb-4">Ειδικότητες Γ' Τάξης ανά Τομέα</h2>
           <div className="mb-6">
