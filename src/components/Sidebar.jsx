@@ -1,5 +1,5 @@
 import { X, ChevronDown, ChevronRight } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { useState } from 'react'
 
 const navGroups = [
@@ -20,8 +20,8 @@ const navGroups = [
     {
         title: 'Γενικό Λύκειο',
         items: [
-            { title: 'Ημερήσιο Γενικό Λύκειο', path: '/geniko-lykeio-imerisio' },
-            { title: 'Εσπερινό Γενικό Λύκειο', path: '/geniko-lykeio-esperino' },
+            { title: 'Ημερήσιο Γενικό Λύκειο', path: '/lykeio-imerisio' },
+            { title: 'Εσπερινό Γενικό Λύκειο', path: '/lykeio-esperino' },
         ],
     },
     {
@@ -88,9 +88,9 @@ function Sidebar({ sidebarOpen, toggleSidebar }) {
         `}
             >
                 <div className="p-4 flex justify-between items-center border-b border-slate-700">
-                    <Link to="/" className="text-xl font-bold">
+                    <NavLink to="/" className="text-xl font-bold">
                         MyApp
-                    </Link>
+                    </NavLink>
                     <button onClick={toggleSidebar} className="lg:hidden text-white">
                         <X size={24} />
                     </button>
@@ -119,12 +119,16 @@ function Sidebar({ sidebarOpen, toggleSidebar }) {
                                 >
                                     {group.items.map((item, itemIndex) => (
                                         <li key={itemIndex}>
-                                            <Link
+                                            <NavLink
                                                 to={item.path}
-                                                className="block p-2 rounded-md hover:bg-slate-700 transition-colors pl-4"
+                                                className={({ isActive }) => 
+                                                    `block p-2 rounded-md transition-colors pl-4 ${
+                                                        isActive ? 'bg-slate-700 font-medium' : 'hover:bg-slate-700'
+                                                    }`
+                                                }
                                             >
                                                 {item.title}
-                                            </Link>
+                                            </NavLink>
                                         </li>
                                     ))}
                                 </ul>
