@@ -25,7 +25,6 @@ export default function GymnasioImerisio() {
         ]}
       />
 
-
       {/* Using the abstracted TabNavigation component */}
       <TabNavigation
         activeTab={activeTab}

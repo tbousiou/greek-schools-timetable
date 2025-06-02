@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import ClassTable from '../components/ClassTable.jsx'
 import TabNavigation from '../components/TabNavigation.jsx';
+import SchoolHeader from '../components/SchoolHeader.jsx';
 import { imerisioGenikoLykeioData } from '../data/gelData.js';
 
 
@@ -17,27 +18,12 @@ export default function LykeioImerisio() {
   return (
     <div className="p-4">
 
-      <div className="flex flex-col sm:flex-row justify-between items-start mb-6">
-        <h1 className="text-2xl font-bold">Ωρολόγιο Πρόγραμμα Ημερήσιο Γενικό Λύκειο</h1>
-        
-        <div className="mt-2 sm:mt-0 bg-gray-100 p-3 rounded-md">
-          <h2 className="text-sm font-semibold mb-2">Πηγές (ΦΕΚ):</h2>
-          <ul className="text-sm space-y-1">
-            <li>
-              <a 
-                href="https://search.et.gr/el/fek/?fekId=613964" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:underline"
-              >
-                ΦΕΚ ΤΕΥΧΟΣ Β 5617 22-09-2023
-              </a>
-            </li>
-            
-          </ul>
-        </div>
-      </div>
-
+      <SchoolHeader
+        schoolName="Ημερήσιο Γενικό Λύκειο"
+        references={[
+          { text: "ΦΕΚ ΤΕΥΧΟΣ Β 5617 22-09-2023", url: "https://search.et.gr/el/fek/?fekId=613964" },
+        ]}
+      />
 
       {/* Using the abstracted TabNavigation component */}
       <TabNavigation
@@ -102,9 +88,10 @@ export default function LykeioImerisio() {
           </div>
 
           <div className="text-sm text-gray-600 mb-4">
+            <p className="mb-2">* 5 ώρες για το κυρίως μάθημα και 1 ώρα για επίλυση αποριών, ανακεφαλαίωση κ.λπ.</p>
             <p className="mb-2">* Ιστορία διδάσκονται οι μαθητές/μαθήτριες που επιλέγουν την Ομάδα Προσανατολισμού "Θετικών Σπουδών και Σπουδών Υγείας" ή την Ομάδα Προσανατολισμού "Σπουδών Οικονομίας και Πληροφορικής". Μαθηματικά διδάσκονται οι μαθητές/μαθήτριες που επιλέγουν την Ομάδα Προσανατολισμού "Ανθρωπιστικών Σπουδών".</p>
-            <p className="mb-2">* Μαθηματικά για τους/τις μαθητές/μαθήτριες που επιλέγουν το 2ο Επιστημονικό Πεδίο ή Βιολογία για τους/τις μαθητές/μαθήτριες που επιλέγουν το 3ο Επιστημονικό Πεδίο.</p>
           </div>
+          
 
           <h2 className="text-xl font-semibold mb-4">Μαθήματα Ομάδων Προσανατολισμού Γ' Τάξης</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

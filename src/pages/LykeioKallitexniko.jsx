@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import ClassTable from '../components/ClassTable.jsx'
 import TabNavigation from '../components/TabNavigation.jsx';
+import SchoolHeader from '../components/SchoolHeader.jsx';
 import { kallitexnikoLykeioData } from '../data/gelData.js';
 
 
@@ -16,46 +17,15 @@ export default function LykeioKallitexniko() {
 
   return (
     <div className="p-4">
-      <div className="flex flex-col sm:flex-row justify-between items-start mb-6">
-        <h1 className="text-2xl font-bold">Ωρολόγιο Πρόγραμμα Καλλιτεχνικό Γενικό Λύκειο</h1>
-        
-        <div className="mt-2 sm:mt-0 bg-gray-100 p-3 rounded-md">
-          <h2 className="text-sm font-semibold mb-2">Πηγές (ΦΕΚ):</h2>
-          <ul className="text-sm space-y-1">
-            <li>
-              <a 
-                href="https://search.et.gr/el/fek/?fekId=610629" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:underline"
-              >
-                ΦΕΚ ΤΕΥΧΟΣ Β 3523 25-08-2020
-              </a>
-            </li>
-            <li>
-              <a 
-                href="https://search.et.gr/el/fek/?fekId=577145" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:underline"
-              >
-                ΦΕΚ ΤΕΥΧΟΣ Β 3570 28-08-2020
-              </a>
-            </li>
-            <li>
-              <a 
-                href="https://search.et.gr/el/fek/?fekId=581585" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:underline"
-              >
-                ΦΕΚ ΤΕΥΧΟΣ Β 5643 03-12-2021
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
 
+      <SchoolHeader
+        schoolName="Καλλιτεχνικό Γενικό Λύκειο"
+        references={[
+          { text: "ΦΕΚ ΤΕΥΧΟΣ Β 3523 25-08-2020", url: "https://search.et.gr/el/fek/?fekId=610629" },
+          { text: "ΦΕΚ ΤΕΥΧΟΣ Β 3570 28-08-2020", url: "https://search.et.gr/el/fek/?fekId=577145" },
+          { text: "ΦΕΚ ΤΕΥΧΟΣ Β 5643 03-12-2021", url: "https://search.et.gr/el/fek/?fekId=581585" }
+        ]}
+      />
 
       {/* Using the abstracted TabNavigation component */}
       <TabNavigation
@@ -166,8 +136,9 @@ export default function LykeioKallitexniko() {
           </div>
 
           <div className="text-sm text-gray-600 mb-4">
+            <p className="mb-2">- 5 ώρες για το κυρίως μάθημα και 1 ώρα για επίλυση αποριών, ανακεφαλαίωση κ.λπ.
+            </p>
             <p className="mb-2">* Ιστορία διδάσκονται οι μαθητές/μαθήτριες που επιλέγουν την Ομάδα Προσανατολισμού "Θετικών Σπουδών και Σπουδών Υγείας" ή την Ομάδα Προσανατολισμού "Σπουδών Οικονομίας και Πληροφορικής". Μαθηματικά διδάσκονται οι μαθητές/μαθήτριες που επιλέγουν την Ομάδα Προσανατολισμού "Ανθρωπιστικών Σπουδών".</p>
-            <p className="mb-2">* Μαθηματικά για τους/τις μαθητές/μαθήτριες που επιλέγουν το 2ο Επιστημονικό Πεδίο ή Βιολογία για τους/τις μαθητές/μαθήτριες που επιλέγουν το 3ο Επιστημονικό Πεδίο.</p>
           </div>
 
           <h2 className="text-xl font-semibold mb-4">Μαθήματα Ομάδων Προσανατολισμού Γ' Τάξης</h2>
@@ -223,7 +194,7 @@ export default function LykeioKallitexniko() {
             </div>
           </div>
 
-          <h2 className="text-xl font-semibold mb-4">Μαθήματα Επιλογής Γ' Τάξης</h2>
+          <h2 className="text-xl font-semibold mb-4">Μαθήματα Επιλογής Γ' Τάξης (Επιλογής 1 από 12)</h2>
           <div className="overflow-x-auto mb-4">
             <ClassTable data={kallitexnikoLykeioData.classC.subjects.optional} />
           </div>

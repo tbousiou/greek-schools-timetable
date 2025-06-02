@@ -11,25 +11,52 @@ import React from 'react'
  * @param {string} [props.footerLabel="Σύνολο ωρών"] - Label for the total row
  * @returns {JSX.Element} Subject hours table
  */
-export default function ClassTable({ 
-  data, 
+export default function ClassTable({
+  data,
   options = {
     showIndex: true,
     showTotal: true,
     showNotes: false
   },
-  footerLabel = "Σύνολο ωρών" 
+  footerLabel = "Σύνολο ωρών"
 }) {
   // Format hours for display
-  const formatHours = (hours) => {
-    if (Array.isArray(hours)) {
-      const [theory, lab] = hours;
-      let result = [];
-      if (theory > 0) result.push(`${theory}Θ`);
-      if (lab > 0) result.push(`${lab}Ε`);
-      return result.join(' + ');
+  // const formatHours = (hours) => {
+  //   if (Array.isArray(hours)) {
+  //     const [theory, lab] = hours;
+  //     let result = [];
+  //     if (theory > 0) result.push(`${theory}Θ`);
+  //     if (lab > 0) result.push(`${lab}Ε`);
+  //     return result.join(' + ');
+  //   }
+  //   return hours;
+  // };
+
+  const formatHours = (hours, hoursBreakdown) => {
+    if (hoursBreakdown) {
+      return `${hours} (${hoursBreakdown})`;
     }
+
     return hours;
+  };
+
+  /**
+  * Formats subject names by making the subject group (text before colon) bold
+  * @param {string} subjectName - The subject name, possibly containing a group and specific subject
+  * @returns {JSX.Element|string} Formatted subject name with group in bold if applicable
+  */
+  const formatSubject = (subjectName) => {
+    if (!subjectName.includes(':')) {
+      return subjectName;
+    }
+
+    const [group, subject] = subjectName.split(':').map(part => part.trim());
+
+    return (
+      <>
+        <span className='font-medium'>{group}</span>: {subject}
+      </>
+    );
   };
 
   // Calculate total hours
@@ -58,8 +85,8 @@ export default function ClassTable({
         {data.map((subject, index) => (
           <tr key={index} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
             {options.showIndex && <td className="py-2 px-4 border-b">{index + 1}</td>}
-            <td className="py-2 px-4 border-b">{subject.name}</td>
-            <td className="py-2 px-4 border-b text-center">{formatHours(subject.hours)}</td>
+            <td className="py-2 px-4 border-b">{formatSubject(subject.name)}</td>
+            <td className="py-2 px-4 border-b text-center">{formatHours(subject.hours, subject.hoursBreakdown)}</td>
             {options.showNotes && <td className="py-2 px-4 border-b text-center">{subject.notes || ''}</td>}
           </tr>
         ))}
