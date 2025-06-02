@@ -83,7 +83,7 @@ function Sidebar({ sidebarOpen, toggleSidebar }) {
             <aside
                 className={`
           fixed lg:relative w-64 h-full bg-slate-800 text-white z-20
-          transition-transform duration-300 ease-in-out
+          transition-transform duration-300 ease-in-out flex flex-col
           ${sidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
         `}
             >
@@ -96,7 +96,7 @@ function Sidebar({ sidebarOpen, toggleSidebar }) {
                     </button>
                 </div>
 
-                <nav className="p-4">
+                <nav className="p-4 overflow-y-auto flex-1">
                     <ul className="space-y-4">
                         {navGroups.map((group, groupIndex) => (
                             <li key={groupIndex}>

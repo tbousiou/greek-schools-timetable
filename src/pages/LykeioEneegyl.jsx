@@ -16,7 +16,46 @@ export default function LykeioEneegyl() {
 
   return (
     <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Ωρολόγιο Πρόγραμμα Ημερήσιο Γενικό Λύκειο</h1>
+      <div className="flex flex-col sm:flex-row justify-between items-start mb-6">
+        <h1 className="text-2xl font-bold">Ωρολόγιο Πρόγραμμα Λύκειο ΕΝΕΕΓΥΛ</h1>
+        
+        <div className="mt-2 sm:mt-0 bg-gray-100 p-3 rounded-md">
+          <h2 className="text-sm font-semibold mb-2">Πηγές (ΦΕΚ):</h2>
+          <ul className="text-sm space-y-1">
+            <li>
+              <a 
+                href="https://search.et.gr/el/fek/?fekId=563597" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                ΦΕΚ ΤΕΥΧΟΣ Β 3791 03-09-2018
+              </a>
+            </li>
+            <li>
+              <a 
+                href="https://search.et.gr/el/fek/?fekId=574878" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                ΦΕΚ ΤΕΥΧΟΣ Β 4140 20-09-2018
+              </a>
+            </li>
+            <li>
+              <a 
+                href="https://search.et.gr/el/fek/?fekId=567401" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                ΦΕΚ ΤΕΥΧΟΣ Β 0723 04-03-2019
+              </a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
 
 
       {/* Using the abstracted TabNavigation component */}

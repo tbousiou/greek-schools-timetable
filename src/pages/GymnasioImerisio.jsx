@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import ClassTable from '../components/ClassTable.jsx';
 import TabNavigation from '../components/TabNavigation.jsx';
+import SchoolHeader from '../components/SchoolHeader.jsx';
 import { imerisioGymnasioData } from '../data/gymnasioData.js';
 
 
@@ -16,7 +17,14 @@ export default function GymnasioImerisio() {
 
   return (
     <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Ωρολόγιο Πρόγραμμα Ημερήσιο Γυμνάσιο</h1>
+      <SchoolHeader
+        schoolName="Ημερήσιο Γυμνάσιο"
+        references={[
+          { text: "ΦΕΚ ΤΕΥΧΟΣ Β 3791 13-08-2021", url: "https://search.et.gr/el/fek/?fekId=608853" },
+          { text: "ΦΕΚ ΤΕΥΧΟΣ Β 4064 06-09-2021", url: "https://search.et.gr/el/fek/?fekId=617249" }
+        ]}
+      />
+
 
       {/* Using the abstracted TabNavigation component */}
       <TabNavigation

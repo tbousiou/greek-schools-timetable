@@ -18,7 +18,46 @@ export default function GymnasioEneegyl() {
 
   return (
     <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Ωρολόγιο Πρόγραμμα Γυμνάσιο ΕΝΕΕΓΥΛ</h1>
+  
+      <div className="flex flex-col sm:flex-row justify-between items-start mb-6">
+        <h1 className="text-2xl font-bold">Ωρολόγιο Πρόγραμμα Γυμνάσιο ΕΝΕΕΓΥΛ</h1>
+        
+        <div className="mt-2 sm:mt-0 bg-gray-100 p-3 rounded-md">
+          <h2 className="text-sm font-semibold mb-2">Πηγές (ΦΕΚ):</h2>
+          <ul className="text-sm space-y-1">
+            <li>
+              <a 
+                href="https://search.et.gr/el/fek/?fekId=617419" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                ΦΕΚ ΤΕΥΧΟΣ Β 4037 02-09-2021
+              </a>
+            </li>
+            <li>
+              <a 
+                href="https://search.et.gr/el/fek/?fekId=622217" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                ΦΕΚ ΤΕΥΧΟΣ Β 4622 06-10-2021
+              </a>
+            </li>
+             <li>
+              <a 
+                href="https://search.et.gr/el/fek/?fekId=626045" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                ΦΕΚ ΤΕΥΧΟΣ Β 5662 26-09-2023
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
 
       {/* Tab Navigation */}
       <TabNavigation 

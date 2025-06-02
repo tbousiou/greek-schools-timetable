@@ -28,7 +28,56 @@ export default function EpalProtypo() {
 
   return (
     <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Ωρολόγιο Πρόγραμμα Πρότυπο Επαγγελματικό Λύκειο (ΕΠΑΛ)</h1>
+      <div className="flex flex-col sm:flex-row justify-between items-start mb-6">
+        <h1 className="text-2xl font-bold">Ωρολόγιο Πρόγραμμα Πρότυπο Επαγγελματικό Λύκειο (ΠΕΠΑΛ)</h1>
+
+        <div className="mt-2 sm:mt-0 bg-gray-100 p-3 rounded-md">
+          <h2 className="text-sm font-semibold mb-2">Πηγές (ΦΕΚ):</h2>
+          <ul className="text-sm space-y-1">
+            <li>
+              <a
+                href="https://search.et.gr/el/fek/?fekId=608695"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                ΦΕΚ ΤΕΥΧΟΣ Β 3470 29-07-2021
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://search.et.gr/el/fek/?fekId=598656"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                ΦΕΚ ΤΕΥΧΟΣ Β 4578 30-08-2022
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://search.et.gr/el/fek/?fekId=589740"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                ΦΕΚ ΤΕΥΧΟΣ Β 4961 22-09-2022
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://search.et.gr/el/fek/?fekId=613262"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                ΦΕΚ ΤΕΥΧΟΣ Β 5251 30-08-2023
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
 
       {/* Using the abstracted TabNavigation component */}
       <TabNavigation
