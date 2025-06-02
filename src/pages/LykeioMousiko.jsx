@@ -55,7 +55,7 @@ export default function LykeioMousiko() {
             <ClassTable data={mousikoLykeioData.classA.subjects.music_optional} />
           </div>
 
-          
+
 
         </section>
       )}
