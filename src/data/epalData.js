@@ -8,7 +8,7 @@ export const imerisioEPALData = {
                 { name: "Φυσικές Επιστήμες: Φυσική", hours: 2 },
                 { name: "Φυσικές Επιστήμες: Χημεία", hours: 1 },
                 { name: "Φυσικές Επιστήμες: Βιολογία", hours: 1 },
-                { name: "Πολιτική Παιδεία", hours: 2 },
+                { name: "Πολιτική Παιδεία*", hours: 2 },
                 { name: "Ιστορία", hours: 1 },
                 { name: "Θρησκευτικά", hours: 1 },
                 { name: "Αγγλικά", hours: 2 },
@@ -22,11 +22,11 @@ export const imerisioEPALData = {
             ],
             optional: [
                 { name: "Αγωγή Υγείας", hours: 2 },
-                { name: "Αρχές Γραμμικού και Αρχιτεκτονικού Σχεδίου", hours: 2, type: "Σχεδιαστικό" },
+                { name: "Αρχές Γραμμικού και Αρχιτεκτονικού Σχεδίου", hours: 2, hoursBreakdown: "2Σ" },
                 { name: "Αρχές Ηλεκτρολογίας και Ηλεκτρονικής", hours: 2 },
                 { name: "Αρχές Μηχανολογίας", hours: 2 },
                 { name: "Αρχές Οικονομίας", hours: 2 },
-                { name: "Βασικές Αρχές Σύνθεσης", hours: 2, type: "Σχεδιαστικό" },
+                { name: "Βασικές Αρχές Σύνθεσης", hours: 2, hoursBreakdown: "2Σ" },
                 { name: "Γεωπονία και Αειφόρος Ανάπτυξη", hours: 2 },
                 { name: "Ναυτιλιακές Γνώσεις", hours: 2 }
             ]
@@ -49,97 +49,97 @@ export const imerisioEPALData = {
                 agricultular: {
                     name: "Γεωπονίας, Τροφίμων και Περιβάλλοντος",
                     subjects: [
-                        { name: "Αρχές Αγροτικής Ανάπτυξης", hours: 2, type: "Θεωρητικό", theory: 2 },
-                        { name: "Περιβάλλον και Γεωργία", hours: 3, type: "Μικτό", theory: 1, lab: 2 },
-                        { name: "Φυτική Παραγωγή", hours: 5, type: "Μικτό", theory: 2, lab: 3 },
-                        { name: "Ζωική Παραγωγή", hours: 3, type: "Μικτό", theory: 2, lab: 1 },
-                        { name: "Τεχνολογία Τροφίμων", hours: 4, type: "Μικτό", theory: 2, lab: 2 },
-                        { name: "Αρχές Αρχιτεκτονικής Τοπίου", hours: 2, type: "Μικτό", theory: 1, lab: 1 },
-                        { name: "Στοιχεία Γεωργικών Εγκαταστάσεων και Γεωργικά Μηχανήματα", hours: 3, type: "Μικτό", theory: 2, lab: 1 },
-                        { name: "Αγγλικά Τομέα", hours: 1, type: "Θεωρητικό" }
+                        { name: "Αρχές Αγροτικής Ανάπτυξης", hours: 2, hoursBreakdown: "2Θ" },
+                        { name: "Περιβάλλον και Γεωργία", hours: 3, hoursBreakdown: "1Θ + 2Ε" },
+                        { name: "Φυτική Παραγωγή", hours: 5, hoursBreakdown: "2Θ + 3Ε" },
+                        { name: "Ζωική Παραγωγή", hours: 3, hoursBreakdown: "2Θ + 1Ε" },
+                        { name: "Τεχνολογία Τροφίμων", hours: 4, hoursBreakdown: "2Θ + 2Ε" },
+                        { name: "Αρχές Αρχιτεκτονικής Τοπίου", hours: 2, hoursBreakdown: "1Θ + 1Ε" },
+                        { name: "Στοιχεία Γεωργικών Εγκαταστάσεων και Γεωργικά Μηχανήματα", hours: 3, hoursBreakdown: "2Θ + 1Ε" },
+                        { name: "Αγγλικά Τομέα", hours: 1, hoursBreakdown: "1Θ" }
                     ]
                 },
                 management: {
                     name: "Διοίκησης και Οικονομίας",
                     subjects: [
-                        { name: "Αρχές Λογιστικής", hours: 6, type: "Μικτό", theory: 3, lab: 3 },
-                        { name: "Εισαγωγή στο Μάρκετινγκ", hours: 2, type: "Θεωρητικό" },
-                        { name: "Θεωρία Τουρισμού και Εφαρμογές", hours: 3, type: "Εργαστηριακό" },
-                        { name: "Εισαγωγή στην Εφοδιαστική (Logistics)", hours: 2, type: "Θεωρητικό" },
-                        { name: "Χρηματοπιστωτικές Συναλλαγές-Λογιστικά Φύλλα (EXCEL)", hours: 2, type: "Εργαστηριακό" },
-                        { name: "Στοιχεία Δικαίου (Αστικό-Εμπορικό-Εργατικό-Τουριστικό)", hours: 4, type: "Θεωρητικό" },
-                        { name: "Οικονομικά Μαθηματικά και Στατιστική", hours: 2, type: "Θεωρητικό" },
-                        { name: "Αγγλικά Τομέα", hours: 2, type: "Θεωρητικό" }
+                        { name: "Αρχές Λογιστικής", hours: 6, hoursBreakdown: "3Θ + 3Ε" },
+                        { name: "Εισαγωγή στο Μάρκετινγκ", hours: 2, hoursBreakdown: "2Θ" },
+                        { name: "Θεωρία Τουρισμού και Εφαρμογές", hours: 3, hoursBreakdown: "3Ε" },
+                        { name: "Εισαγωγή στην Εφοδιαστική (Logistics)", hours: 2, hoursBreakdown: "2Θ" },
+                        { name: "Χρηματοπιστωτικές Συναλλαγές-Λογιστικά Φύλλα (EXCEL)", hours: 2, hoursBreakdown: "2Ε" },
+                        { name: "Στοιχεία Δικαίου (Αστικό-Εμπορικό-Εργατικό-Τουριστικό)", hours: 4, hoursBreakdown: "4Θ" },
+                        { name: "Οικονομικά Μαθηματικά και Στατιστική", hours: 2, hoursBreakdown: "2Θ" },
+                        { name: "Αγγλικά Τομέα", hours: 2, hoursBreakdown: "2Θ" }
                     ]
                 },
                 civil_engineering: {
                     name: "Δομικών Έργων, Δομημένου Περιβάλλοντος και Αρχιτεκτονικού Σχεδιασμού",
                     subjects: [
-                        { name: "Οικοδομικό Σχέδιο", hours: 4, type: "Σχεδιαστικό" },
-                        { name: "Τοπογραφία", hours: 5, type: "Μικτό", theory: 2, lab: 3 },
-                        { name: "Τοπογραφικό Σχέδιο - Ψηφιακή Χαρτογραφία", hours: 3, type: "Εργαστηριακό" },
-                        { name: "Κτιριακά Έργα και Δομικά Υλικά", hours: 4, type: "Μικτό", theory: 2, lab: 2 },
-                        { name: "Σχέδιο Δομικών Έργων με χρήση Η/Υ Ι", hours: 4, type: "Εργαστηριακό" },
-                        { name: "Δομημένο Περιβάλλον και Πολεοδομικές Εφαρμογές", hours: 2, type: "Θεωρητικό" },
-                        { name: "Αγγλικά Τομέα", hours: 1, type: "Θεωρητικό" }
+                        { name: "Οικοδομικό Σχέδιο", hours: 4, hoursBreakdown: "4Σ" },
+                        { name: "Τοπογραφία", hours: 5, hoursBreakdown: "2Θ + 3Ε" },
+                        { name: "Τοπογραφικό Σχέδιο - Ψηφιακή Χαρτογραφία", hours: 3, hoursBreakdown: "3Ε" },
+                        { name: "Κτιριακά Έργα και Δομικά Υλικά", hours: 4, hoursBreakdown: "2Θ + 2Ε" },
+                        { name: "Σχέδιο Δομικών Έργων με χρήση Η/Υ Ι", hours: 4, hoursBreakdown: "4Ε" },
+                        { name: "Δομημένο Περιβάλλον και Πολεοδομικές Εφαρμογές", hours: 2, hoursBreakdown: "2Θ" },
+                        { name: "Αγγλικά Τομέα", hours: 1, hoursBreakdown: "1Θ" }
                     ]
                 },
                 appliedArts: {
                     name: "Εφαρμοσμένων Τεχνών",
                     subjects: [
-                        { name: "Ελεύθερο Σχέδιο", hours: 4, type: "Σχεδιαστικό" },
-                        { name: "Γραμμικό Σχέδιο", hours: 3, type: "Σχεδιαστικό" },
-                        { name: "Ιστορία της Τέχνης", hours: 3, type: "Θεωρητικό" },
-                        { name: "Αρχές Σύνθεσης", hours: 3, type: "Εργαστηριακό" },
-                        { name: "Εφαρμοσμένες Τέχνες με χρήση Η/Υ", hours: 5, type: "Εργαστηριακό" },
-                        { name: "Ειδικό Εργαστηριακό Μάθημα", hours: 5, type: "Εργαστηριακό" }
+                        { name: "Ελεύθερο Σχέδιο", hours: 4, hoursBreakdown: "4Σ" },
+                        { name: "Γραμμικό Σχέδιο", hours: 3, hoursBreakdown: "3Σ" },
+                        { name: "Ιστορία της Τέχνης", hours: 3, hoursBreakdown: "3Θ" },
+                        { name: "Αρχές Σύνθεσης", hours: 3, hoursBreakdown: "3Ε" },
+                        { name: "Εφαρμοσμένες Τέχνες με χρήση Η/Υ", hours: 5, hoursBreakdown: "5Ε" },
+                        { name: "Ειδικό Εργαστηριακό Μάθημα*", hours: 5, hoursBreakdown: "5Ε" }
                     ]
                 },
                 electrical_engineering: {
                     name: "Ηλεκτρολογίας, Ηλεκτρονικής και Αυτοματισμού",
                     subjects: [
-                        { name: "Ηλεκτροτεχνία (Κυκλώματα Συνεχούς και Εναλλασσόμενου Ρεύματος)", hours: 4, type: "Μικτό", theory: 2, lab: 2 },
-                        { name: "Εσωτερικές Ηλεκτρικές Εγκαταστάσεις και Ηλεκτρολογικό Σχέδιο", hours: 7, type: "Μικτό", theory: 2, lab: 5 },
-                        { name: "Εισαγωγή στα Υπολογιστικά Συστήματα και στα Δίκτυα Επικοινωνιών", hours: 3, type: "Εργαστηριακό" },
-                        { name: "Αυτοματισμοί, Αισθητήρες", hours: 2, type: "Εργαστηριακό" },
-                        { name: "Αναλογικά και Ψηφιακά Ηλεκτρονικά", hours: 6, type: "Μικτό", theory: 2, lab: 4 },
-                        { name: "Αγγλικά Τομέα", hours: 1, type: "Θεωρητικό" }
+                        { name: "Ηλεκτροτεχνία (Κυκλώματα Συνεχούς και Εναλλασσόμενου Ρεύματος)", hours: 4, hoursBreakdown: "2Θ + 2Ε" },
+                        { name: "Εσωτερικές Ηλεκτρικές Εγκαταστάσεις και Ηλεκτρολογικό Σχέδιο", hours: 7, hoursBreakdown: "2Θ + 5Ε" },
+                        { name: "Εισαγωγή στα Υπολογιστικά Συστήματα και στα Δίκτυα Επικοινωνιών", hours: 3, hoursBreakdown: "3Ε" },
+                        { name: "Αυτοματισμοί, Αισθητήρες", hours: 2, hoursBreakdown: "2Ε" },
+                        { name: "Αναλογικά και Ψηφιακά Ηλεκτρονικά", hours: 6, hoursBreakdown: "2Θ + 4Ε" },
+                        { name: "Αγγλικά Τομέα", hours: 1, hoursBreakdown: "1Θ" }
                     ]
                 },
                 mechanical_engineering: {
                     name: "Μηχανολογίας",
                     subjects: [
-                        { name: "Στοιχεία Τεχνικής Θερμοδυναμικής - Εφαρμογές", hours: 6, type: "Μικτό", theory: 3, lab: 3 },
-                        { name: "Μηχανική-Αντοχή Υλικών", hours: 2, type: "Θεωρητικό" },
-                        { name: "Σχεδιασμός και Περιγραφή Στοιχείων Μηχανών", hours: 3, type: "Εργαστηριακό" },
-                        { name: "Τεχνολογία Μηχανολογικών Κατασκευών-Εφαρμογές", hours: 7, type: "Μικτό", theory: 2, lab: 5 },
-                        { name: "Βασική Ηλεκτρολογία και Εφαρμογές", hours: 4, type: "Μικτό", theory: 2, lab: 2 },
-                        { name: "Αγγλικά Τομέα", hours: 1, type: "Θεωρητικό" }
+                        { name: "Στοιχεία Τεχνικής Θερμοδυναμικής - Εφαρμογές", hours: 6, hoursBreakdown: "3Θ + 3Ε" },
+                        { name: "Μηχανική-Αντοχή Υλικών", hours: 2, hoursBreakdown: "2Θ" },
+                        { name: "Σχεδιασμός και Περιγραφή Στοιχείων Μηχανών", hours: 3, hoursBreakdown: "3Ε" },
+                        { name: "Τεχνολογία Μηχανολογικών Κατασκευών-Εφαρμογές", hours: 7, hoursBreakdown: "2Θ + 5Ε" },
+                        { name: "Βασική Ηλεκτρολογία και Εφαρμογές", hours: 4, hoursBreakdown: "2Θ + 2Ε" },
+                        { name: "Αγγλικά Τομέα", hours: 1, hoursBreakdown: "1Θ" }
                     ]
                 },
                 computer_science: {
                     name: "Πληροφορικής",
                     subjects: [
-                        { name: "Αρχές Προγραμματισμού Υπολογιστών", hours: 4, type: "Μικτό", theory: 1, lab: 3 },
-                        { name: "Υλικό και Δίκτυα Υπολογιστών", hours: 4, type: "Μικτό", theory: 2, lab: 2 },
-                        { name: "Βασικά Θέματα Πληροφορικής", hours: 4, type: "Μικτό", theory: 2, lab: 2 },
-                        { name: "Λειτουργικά Συστήματα και Ασφάλεια Πληροφοριακών Συστημάτων", hours: 3, type: "Μικτό", theory: 1, lab: 2 },
-                        { name: "Σχεδιασμός και Ανάπτυξη Ιστοτόπων", hours: 4, type: "Εργαστηριακό" },
-                        { name: "Τεχνικά Θέματα Πωλήσεων και Προδιαγραφών Υλικού και Λογισμικού", hours: 3, type: "Μικτό", theory: 1, lab: 2 },
-                        { name: "Αγγλικά Τομέα", hours: 1, type: "Θεωρητικό" }
+                        { name: "Αρχές Προγραμματισμού Υπολογιστών", hours: 4, hoursBreakdown: "1Θ + 3Ε" },
+                        { name: "Υλικό και Δίκτυα Υπολογιστών", hours: 4, hoursBreakdown: "2Θ + 2Ε" },
+                        { name: "Βασικά Θέματα Πληροφορικής", hours: 4, hoursBreakdown: "2Θ + 2Ε" },
+                        { name: "Λειτουργικά Συστήματα και Ασφάλεια Πληροφοριακών Συστημάτων", hours: 3, hoursBreakdown: "1Θ + 2Ε" },
+                        { name: "Σχεδιασμός και Ανάπτυξη Ιστοτόπων", hours: 4, hoursBreakdown: "4Ε" },
+                        { name: "Τεχνικά Θέματα Πωλήσεων και Προδιαγραφών Υλικού και Λογισμικού", hours: 3, hoursBreakdown: "1Θ + 2Ε" },
+                        { name: "Αγγλικά Τομέα", hours: 1, hoursBreakdown: "1Θ" }
                     ]
                 },
                 health: {
                     name: "Υγείας - Πρόνοιας και Ευεξίας",
                     subjects: [
-                        { name: "Ανατομία-Φυσιολογία Ι", hours: 3, type: "Θεωρητικό" },
-                        { name: "Πρώτες Βοήθειες", hours: 2, type: "Εργαστηριακό" },
-                        { name: "Υγεία και Διατροφή", hours: 2, type: "Θεωρητικό" },
-                        { name: "Διαπροσωπικές Σχέσεις", hours: 2, type: "Θεωρητικό" },
-                        { name: "Εργασιακό Περιβάλλον Τομέα", hours: 2, type: "Εργαστηριακό" },
-                        { name: "Αγγλικά Τομέα", hours: 2, type: "Θεωρητικό" },
-                        { name: "Ειδικό Μάθημα Α", hours: 5, type: "Μικτό" },
-                        { name: "Ειδικό Μάθημα Β", hours: 5, type: "Μικτό" }
+                        { name: "Ανατομία-Φυσιολογία Ι", hours: 3, hoursBreakdown: "3Θ" },
+                        { name: "Πρώτες Βοήθειες", hours: 2, hoursBreakdown: "2Ε" },
+                        { name: "Υγεία και Διατροφή", hours: 2, hoursBreakdown: "2Θ" },
+                        { name: "Διαπροσωπικές Σχέσεις", hours: 2, hoursBreakdown: "2Θ" },
+                        { name: "Εργασιακό Περιβάλλον Τομέα", hours: 2, hoursBreakdown: "2Ε" },
+                        { name: "Αγγλικά Τομέα", hours: 2, hoursBreakdown: "2Θ" },
+                        { name: "Ειδικό Μάθημα Α", hours: 5, hoursBreakdown: "2Θ + 3Ε" },
+                        { name: "Ειδικό Μάθημα Β", hours: 5, hoursBreakdown: "2Θ + 3Ε" }
                     ]
                 },
             }
@@ -590,27 +590,30 @@ export const esperinoEPALData = {
     classA: {
         subjects: {
             core: [
-                { name: "Νέα Ελληνικά", hours: 3 },
-                { name: "Μαθηματικά: Άλγεβρα", hours: 2 },
+                { name: "Νέα Ελληνικά", hours: 4 },
+                { name: "Μαθηματικά: Άλγεβρα", hours: 3 },
                 { name: "Μαθηματικά: Γεωμετρία", hours: 1 },
-                { name: "Φυσική", hours: 1 },
-                { name: "Πολιτική Παιδεία", hours: 2 },
+                { name: "Φυσικές Επιστήμες: Φυσική", hours: 2 },
+                { name: "Φυσικές Επιστήμες: Χημεία", hours: 1 },
+                { name: "Φυσικές Επιστήμες: Βιολογία", hours: 1 },
+                { name: "Πολιτική Παιδεία", hours: 1 },
+                { name: "Ιστορία", hours: 1 },
+                { name: "Θρησκευτικά", hours: 1 },
                 { name: "Αγγλικά", hours: 2 },
+                { name: "Πληροφορική*", hours: 2 },
                 { name: "Φυσική Αγωγή", hours: 2 },
-                { name: "Πληροφορική*", hours: 2 }
             ],
             orientation: [
                 { name: "Ερευνητική Εργασία στην Τεχνολογία*", hours: 2 },
-                { name: "Σχολικός Επαγγελματικός Προσανατολισμός - Ασφάλεια και Υγεία στο χώρο εργασίας", hours: 2 },
-                { name: "Ζώνη Δημιουργικών Δραστηριοτήτων", hours: 3 },
+                { name: "Ζώνη Δημιουργικών Δραστηριοτήτων", hours: 2 },
             ],
             optional: [
                 { name: "Αγωγή Υγείας", hours: 2 },
-                { name: "Αρχές Γραμμικού και Αρχιτεκτονικού Σχεδίου", hours: 2, type: "Σχεδιαστικό" },
+                { name: "Αρχές Γραμμικού και Αρχιτεκτονικού Σχεδίου", hours: 2, hoursBreakdown: "2Σ" },
                 { name: "Αρχές Ηλεκτρολογίας και Ηλεκτρονικής", hours: 2 },
                 { name: "Αρχές Μηχανολογίας", hours: 2 },
                 { name: "Αρχές Οικονομίας", hours: 2 },
-                { name: "Βασικές Αρχές Σύνθεσης", hours: 2, type: "Σχεδιαστικό" },
+                { name: "Βασικές Αρχές Σύνθεσης", hours: 2, hoursBreakdown: "2Σ" },
                 { name: "Γεωπονία και Αειφόρος Ανάπτυξη", hours: 2 },
                 { name: "Ναυτιλιακές Γνώσεις", hours: 2 }
             ]
@@ -624,106 +627,104 @@ export const esperinoEPALData = {
                 { name: "Μαθηματικά: Γεωμετρία", hours: 1 },
                 { name: "Φυσικές Επιστήμες: Φυσική", hours: 1 },
                 { name: "Φυσικές Επιστήμες: Χημεία", hours: 1 },
-                { name: "Θρησκευτικά", hours: 1 },
                 { name: "Αγγλικά", hours: 1 },
                 { name: "Εισαγωγή στις Αρχές της Επιστήμης των Η/Υ", hours: 1 },
-                { name: "Φυσική Αγωγή", hours: 1 }
             ],
             sectors: {
                 agricultular: {
                     name: "Γεωπονίας, Τροφίμων και Περιβάλλοντος",
                     subjects: [
-                        { name: "Αρχές Αγροτικής Ανάπτυξης", hours: 2, type: "Θεωρητικό", theory: 2 },
-                        { name: "Περιβάλλον και Γεωργία", hours: 3, type: "Μικτό", theory: 1, lab: 2 },
-                        { name: "Φυτική Παραγωγή", hours: 5, type: "Μικτό", theory: 2, lab: 3 },
-                        { name: "Ζωική Παραγωγή", hours: 3, type: "Μικτό", theory: 2, lab: 1 },
-                        { name: "Τεχνολογία Τροφίμων", hours: 4, type: "Μικτό", theory: 2, lab: 2 },
-                        { name: "Αρχές Αρχιτεκτονικής Τοπίου", hours: 2, type: "Μικτό", theory: 1, lab: 1 },
-                        { name: "Στοιχεία Γεωργικών Εγκαταστάσεων και Γεωργικά Μηχανήματα", hours: 3, type: "Μικτό", theory: 2, lab: 1 },
-                        { name: "Αγγλικά Τομέα", hours: 1, type: "Θεωρητικό" }
+                        { name: "Αρχές Αγροτικής Ανάπτυξης", hours: 2, hoursBreakdown: "2Θ" },
+                        { name: "Περιβάλλον και Γεωργία", hours: 2, hoursBreakdown: "1Θ + 1Ε" },
+                        { name: "Φυτική Παραγωγή", hours: 4, hoursBreakdown: "2Θ + 2Ε" },
+                        { name: "Ζωική Παραγωγή", hours: 3, hoursBreakdown: "2Θ + 1Ε" },
+                        { name: "Τεχνολογία Τροφίμων", hours: 4, hoursBreakdown: "2Θ + 2Ε" },
+                        { name: "Αρχές Αρχιτεκτονικής Τοπίου", hours: 2, hoursBreakdown: "1Θ + 1Ε" },
+                        { name: "Στοιχεία Γεωργικών Εγκαταστάσεων και Γεωργικά Μηχανήματα", hours: 2, hoursBreakdown: "1Θ + 1Ε" },
+                        { name: "Αγγλικά Τομέα", hours: 1, hoursBreakdown: "1Θ" }
                     ]
                 },
                 management: {
                     name: "Διοίκησης και Οικονομίας",
                     subjects: [
-                        { name: "Αρχές Λογιστικής", hours: 6, type: "Μικτό", theory: 3, lab: 3 },
-                        { name: "Εισαγωγή στο Μάρκετινγκ", hours: 2, type: "Θεωρητικό" },
-                        { name: "Θεωρία Τουρισμού και Εφαρμογές", hours: 3, type: "Εργαστηριακό" },
-                        { name: "Εισαγωγή στην Εφοδιαστική (Logistics)", hours: 2, type: "Θεωρητικό" },
-                        { name: "Χρηματοπιστωτικές Συναλλαγές-Λογιστικά Φύλλα (EXCEL)", hours: 2, type: "Εργαστηριακό" },
-                        { name: "Στοιχεία Δικαίου (Αστικό-Εμπορικό-Εργατικό-Τουριστικό)", hours: 4, type: "Θεωρητικό" },
-                        { name: "Οικονομικά Μαθηματικά και Στατιστική", hours: 2, type: "Θεωρητικό" },
-                        { name: "Αγγλικά Τομέα", hours: 2, type: "Θεωρητικό" }
+                        { name: "Αρχές Λογιστικής", hours: 4, hoursBreakdown: "2Θ + 2Ε" },
+                        { name: "Εισαγωγή στο Μάρκετινγκ", hours: 2, hoursBreakdown: "2Θ" },
+                        { name: "Θεωρία Τουρισμού και Εφαρμογές", hours: 3, hoursBreakdown: "3Ε" },
+                        { name: "Εισαγωγή στην Εφοδιαστική (Logistics)", hours: 2, hoursBreakdown: "2Θ" },
+                        { name: "Χρηματοπιστωτικές Συναλλαγές-Λογιστικά Φύλλα (EXCEL)", hours: 2, hoursBreakdown: "2Ε" },
+                        { name: "Στοιχεία Δικαίου (Αστικό-Εμπορικό-Εργατικό-Τουριστικό)", hours: 3, hoursBreakdown: "3Θ" },
+                        { name: "Οικονομικά Μαθηματικά και Στατιστική", hours: 2, hoursBreakdown: "2Θ" },
+                        { name: "Αγγλικά Τομέα", hours: 2, hoursBreakdown: "2Θ" }
                     ]
                 },
                 civil_engineering: {
                     name: "Δομικών Έργων, Δομημένου Περιβάλλοντος και Αρχιτεκτονικού Σχεδιασμού",
                     subjects: [
-                        { name: "Οικοδομικό Σχέδιο", hours: 4, type: "Σχεδιαστικό" },
-                        { name: "Τοπογραφία", hours: 5, type: "Μικτό", theory: 2, lab: 3 },
-                        { name: "Τοπογραφικό Σχέδιο - Ψηφιακή Χαρτογραφία", hours: 3, type: "Εργαστηριακό" },
-                        { name: "Κτιριακά Έργα και Δομικά Υλικά", hours: 4, type: "Μικτό", theory: 2, lab: 2 },
-                        { name: "Σχέδιο Δομικών Έργων με χρήση Η/Υ Ι", hours: 4, type: "Εργαστηριακό" },
-                        { name: "Δομημένο Περιβάλλον και Πολεοδομικές Εφαρμογές", hours: 2, type: "Θεωρητικό" },
-                        { name: "Αγγλικά Τομέα", hours: 1, type: "Θεωρητικό" }
+                        { name: "Οικοδομικό Σχέδιο", hours: 4, hoursBreakdown: "4Σ" },
+                        { name: "Τοπογραφία", hours: 4, hoursBreakdown: "2Θ + 2Ε" },
+                        { name: "Τοπογραφικό Σχέδιο - Ψηφιακή Χαρτογραφία", hours: 2, hoursBreakdown: "2Ε" },
+                        { name: "Κτιριακά Έργα και Δομικά Υλικά", hours: 4, hoursBreakdown: "2Θ + 2Ε" },
+                        { name: "Σχέδιο Δομικών Έργων με χρήση Η/Υ Ι", hours: 3, hoursBreakdown: "3Ε" },
+                        { name: "Δομημένο Περιβάλλον και Πολεοδομικές Εφαρμογές", hours: 2, hoursBreakdown: "2Θ" },
+                        { name: "Αγγλικά Τομέα", hours: 1, hoursBreakdown: "1Θ" }
                     ]
                 },
                 appliedArts: {
                     name: "Εφαρμοσμένων Τεχνών",
                     subjects: [
-                        { name: "Ελεύθερο Σχέδιο", hours: 4, type: "Σχεδιαστικό" },
-                        { name: "Γραμμικό Σχέδιο", hours: 3, type: "Σχεδιαστικό" },
-                        { name: "Ιστορία της Τέχνης", hours: 3, type: "Θεωρητικό" },
-                        { name: "Αρχές Σύνθεσης", hours: 3, type: "Εργαστηριακό" },
-                        { name: "Εφαρμοσμένες Τέχνες με χρήση Η/Υ", hours: 5, type: "Εργαστηριακό" },
-                        { name: "Ειδικό Εργαστηριακό Μάθημα", hours: 5, type: "Εργαστηριακό" }
+                        { name: "Ελεύθερο Σχέδιο", hours: 4, hoursBreakdown: "4Σ" },
+                        { name: "Γραμμικό Σχέδιο", hours: 3, hoursBreakdown: "3Σ" },
+                        { name: "Ιστορία της Τέχνης", hours: 2, hoursBreakdown: "2Θ" },
+                        { name: "Αρχές Σύνθεσης", hours: 3, hoursBreakdown: "3Ε" },
+                        { name: "Εφαρμοσμένες Τέχνες με χρήση Η/Υ", hours: 4, hoursBreakdown: "4Ε" },
+                        { name: "Ειδικό Εργαστηριακό Μάθημα", hours: 4, hoursBreakdown: "4Ε" }
                     ]
                 },
                 electrical_engineering: {
                     name: "Ηλεκτρολογίας, Ηλεκτρονικής και Αυτοματισμού",
                     subjects: [
-                        { name: "Ηλεκτροτεχνία (Κυκλώματα Συνεχούς και Εναλλασσόμενου Ρεύματος)", hours: 4, type: "Μικτό", theory: 2, lab: 2 },
-                        { name: "Εσωτερικές Ηλεκτρικές Εγκαταστάσεις και Ηλεκτρολογικό Σχέδιο", hours: 7, type: "Μικτό", theory: 2, lab: 5 },
-                        { name: "Εισαγωγή στα Υπολογιστικά Συστήματα και στα Δίκτυα Επικοινωνιών", hours: 3, type: "Εργαστηριακό" },
-                        { name: "Αυτοματισμοί, Αισθητήρες", hours: 2, type: "Εργαστηριακό" },
-                        { name: "Αναλογικά και Ψηφιακά Ηλεκτρονικά", hours: 6, type: "Μικτό", theory: 2, lab: 4 },
-                        { name: "Αγγλικά Τομέα", hours: 1, type: "Θεωρητικό" }
+                        { name: "Ηλεκτροτεχνία (Κυκλώματα Συνεχούς και Εναλλασσόμενου Ρεύματος)", hours: 4, hoursBreakdown: "2Θ + 2Ε" },
+                        { name: "Εσωτερικές Ηλεκτρικές Εγκαταστάσεις και Ηλεκτρολογικό Σχέδιο", hours: 6, hoursBreakdown: "2Θ + 4Ε" },
+                        { name: "Εισαγωγή στα Υπολογιστικά Συστήματα και στα Δίκτυα Επικοινωνιών", hours: 2, hoursBreakdown: "2Ε" },
+                        { name: "Αυτοματισμοί, Αισθητήρες", hours: 2, hoursBreakdown: "2Ε" },
+                        { name: "Αναλογικά και Ψηφιακά Ηλεκτρονικά", hours: 5, hoursBreakdown: "2Θ + 3Ε" },
+                        { name: "Αγγλικά Τομέα", hours: 1, hoursBreakdown: "1Θ" }
                     ]
                 },
                 mechanical_engineering: {
                     name: "Μηχανολογίας",
                     subjects: [
-                        { name: "Στοιχεία Τεχνικής Θερμοδυναμικής - Εφαρμογές", hours: 6, type: "Μικτό", theory: 3, lab: 3 },
-                        { name: "Μηχανική-Αντοχή Υλικών", hours: 2, type: "Θεωρητικό" },
-                        { name: "Σχεδιασμός και Περιγραφή Στοιχείων Μηχανών", hours: 3, type: "Εργαστηριακό" },
-                        { name: "Τεχνολογία Μηχανολογικών Κατασκευών-Εφαρμογές", hours: 7, type: "Μικτό", theory: 2, lab: 5 },
-                        { name: "Βασική Ηλεκτρολογία και Εφαρμογές", hours: 4, type: "Μικτό", theory: 2, lab: 2 },
-                        { name: "Αγγλικά Τομέα", hours: 1, type: "Θεωρητικό" }
+                        { name: "Στοιχεία Τεχνικής Θερμοδυναμικής - Εφαρμογές", hours: 5, hoursBreakdown: "3Θ + 2Ε" },
+                        { name: "Μηχανική-Αντοχή Υλικών", hours: 2, hoursBreakdown: "2Θ" },
+                        { name: "Σχεδιασμός και Περιγραφή Στοιχείων Μηχανών", hours: 2, hoursBreakdown: "2Ε" },
+                        { name: "Τεχνολογία Μηχανολογικών Κατασκευών-Εφαρμογές", hours: 6, hoursBreakdown: "2Θ + 4Ε" },
+                        { name: "Βασική Ηλεκτρολογία και Εφαρμογές", hours: 4, hoursBreakdown: "2Θ + 2Ε" },
+                        { name: "Αγγλικά Τομέα", hours: 1, hoursBreakdown: "1Θ" }
                     ]
                 },
                 computer_science: {
                     name: "Πληροφορικής",
                     subjects: [
-                        { name: "Αρχές Προγραμματισμού Υπολογιστών", hours: 4, type: "Μικτό", theory: 1, lab: 3 },
-                        { name: "Υλικό και Δίκτυα Υπολογιστών", hours: 4, type: "Μικτό", theory: 2, lab: 2 },
-                        { name: "Βασικά Θέματα Πληροφορικής", hours: 4, type: "Μικτό", theory: 2, lab: 2 },
-                        { name: "Λειτουργικά Συστήματα και Ασφάλεια Πληροφοριακών Συστημάτων", hours: 3, type: "Μικτό", theory: 1, lab: 2 },
-                        { name: "Σχεδιασμός και Ανάπτυξη Ιστοτόπων", hours: 4, type: "Εργαστηριακό" },
-                        { name: "Τεχνικά Θέματα Πωλήσεων και Προδιαγραφών Υλικού και Λογισμικού", hours: 3, type: "Μικτό", theory: 1, lab: 2 },
-                        { name: "Αγγλικά Τομέα", hours: 1, type: "Θεωρητικό" }
+                        { name: "Αρχές Προγραμματισμού Υπολογιστών", hours: 4, hoursBreakdown: "1Θ + 3Ε" },
+                        { name: "Υλικό και Δίκτυα Υπολογιστών", hours: 4, hoursBreakdown: "2Θ + 2Ε" },
+                        { name: "Βασικά Θέματα Πληροφορικής", hours: 3, hoursBreakdown: "1Θ + 2Ε" },
+                        { name: "Λειτουργικά Συστήματα και Ασφάλεια Πληροφοριακών Συστημάτων", hours: 3, hoursBreakdown: "1Θ + 2Ε" },
+                        { name: "Σχεδιασμός και Ανάπτυξη Ιστοτόπων", hours: 3, hoursBreakdown: "3Ε" },
+                        { name: "Τεχνικά Θέματα Πωλήσεων και Προδιαγραφών Υλικού και Λογισμικού", hours: 2, hoursBreakdown: "1Θ + 1Ε" },
+                        { name: "Αγγλικά Τομέα", hours: 1, hoursBreakdown: "1Θ" }
                     ]
                 },
                 health: {
                     name: "Υγείας - Πρόνοιας και Ευεξίας",
                     subjects: [
-                        { name: "Ανατομία-Φυσιολογία Ι", hours: 3, type: "Θεωρητικό" },
-                        { name: "Πρώτες Βοήθειες", hours: 2, type: "Εργαστηριακό" },
-                        { name: "Υγεία και Διατροφή", hours: 2, type: "Θεωρητικό" },
-                        { name: "Διαπροσωπικές Σχέσεις", hours: 2, type: "Θεωρητικό" },
-                        { name: "Εργασιακό Περιβάλλον Τομέα", hours: 2, type: "Εργαστηριακό" },
-                        { name: "Αγγλικά Τομέα", hours: 2, type: "Θεωρητικό" },
-                        { name: "Ειδικό Μάθημα Α", hours: 5, type: "Μικτό" },
-                        { name: "Ειδικό Μάθημα Β", hours: 5, type: "Μικτό" }
+                        { name: "Ανατομία-Φυσιολογία Ι", hours: 3, hoursBreakdown: "3Θ" },
+                        { name: "Πρώτες Βοήθειες", hours: 2, hoursBreakdown: "2Ε" },
+                        { name: "Υγεία και Διατροφή", hours: 2, hoursBreakdown: "2Θ" },
+                        { name: "Διαπροσωπικές Σχέσεις", hours: 1, hoursBreakdown: "1Θ" },
+                        { name: "Εργασιακό Περιβάλλον Τομέα", hours: 2, hoursBreakdown: "2Ε" },
+                        { name: "Αγγλικά Τομέα", hours: 2, hoursBreakdown: "2Θ" },
+                        { name: "Ειδικό Μάθημα Α", hours: 4, hoursBreakdown: "2Θ + 2Ε" },
+                        { name: "Ειδικό Μάθημα Β", hours: 4, hoursBreakdown: "2Θ + 2Ε" }
                     ]
                 },
             }
@@ -1166,7 +1167,7 @@ export const esperinoEPALData = {
             }
         },
     },
-    
+
 };
 
 export const protypoEPALData = {

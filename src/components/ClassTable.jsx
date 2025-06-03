@@ -54,7 +54,7 @@ export default function ClassTable({
 
     return (
       <>
-        <span className='font-medium'>{group}</span>: {subject}
+        <span className='font-semibold'>{group}</span>: {subject}
       </>
     );
   };

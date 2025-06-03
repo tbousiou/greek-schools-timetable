@@ -68,7 +68,7 @@ export default function EpalEsperino() {
               </p>
             </div>
   
-            <h2 className="text-xl font-semibold mb-4">Μαθήματα Επιλογής Α' Τάξης</h2>
+            <h2 className="text-xl font-semibold mb-4">Μαθήματα Επιλογής Α' Τάξης (3 από 8)</h2>
   
             <div className="overflow-x-auto mb-4">
               <ClassTable data={esperinoEPALData.classA.subjects.optional} />
@@ -88,11 +88,7 @@ export default function EpalEsperino() {
             <div className="overflow-x-auto mb-4">
               <ClassTable data={esperinoEPALData.classB.subjects.core} />
             </div>
-            <div className="text-sm text-gray-600">
-              <p className='mb-2'>
-                - Γαλλικά ή Γερμανικά.
-              </p>
-            </div>
+            
   
             <h2 className="text-xl font-semibold mb-4">Μαθήματα Τομέων Β' Τάξης</h2>
             <div className="mb-6">

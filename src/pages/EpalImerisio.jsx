@@ -58,6 +58,9 @@ export default function EpalImerisio() {
           </div>
           <div className="text-sm text-gray-600">
             <p className='mb-2'>
+              - Διακριτά διδακτέα αντικείμενα Οικονομία, Πολιτικοί Θεσμοί και Αρχές Δικαίου και Κοινωνιολογία
+            </p>
+            <p className='mb-2'>
               - Όταν ο αριθμός των μαθητών του τμήματος είναι μεγαλύτερος από δεκαέξι (16), κάθε τμήμα χωρίζεται σε δύο ομάδες. Σε κάθε ομάδα διδάσκονται εναλλάξ τα μαθήματα «Πληροφορική» και «Ερευνητική Εργασία στην Τεχνολογία» δύο (2) ώρες εβδομαδιαίως.
             </p>
           </div>
@@ -72,7 +75,7 @@ export default function EpalImerisio() {
             </p>
           </div>
 
-          <h2 className="text-xl font-semibold mb-4">Μαθήματα Επιλογής Α' Τάξης</h2>
+          <h2 className="text-xl font-semibold mb-4">Μαθήματα Επιλογής Α' Τάξης (3 από 8)</h2>
 
           <div className="overflow-x-auto mb-4">
             <ClassTable data={imerisioEPALData.classA.subjects.optional} />
@@ -92,11 +95,7 @@ export default function EpalImerisio() {
           <div className="overflow-x-auto mb-4">
             <ClassTable data={imerisioEPALData.classB.subjects.core} />
           </div>
-          <div className="text-sm text-gray-600">
-            <p className='mb-2'>
-              - Γαλλικά ή Γερμανικά.
-            </p>
-          </div>
+          
 
           <h2 className="text-xl font-semibold mb-4">Μαθήματα Τομέων Β' Τάξης</h2>
           <div className="mb-6">
