@@ -1385,7 +1385,7 @@ export const protypoEPALData = {
                                 { name: "Αρχές Βιολογικής Γεωργίας", hours: 3, hoursBreakdown: "3Θ" },
                                 { name: "Ανθοκομικά Φυτά", hours: 4, hoursBreakdown: "2Θ + 2Ε" },
                                 { name: "Εφαρμογές Αρδευτικών Δικτύων στην Κηποτεχνία", hours: 3, hoursBreakdown: "1Θ + 2Ε" },
-                                { name: "Σχεδιασμός Φυτοτεχνικών Έργων", hours: 5, hoursBreakdown: "2Θ + 3Ε" },
+                                { name: "Σύγχρονες Εφαρμογές Αρχιτεκτονικής Τοπίου", hours: 5, hoursBreakdown: "2Θ + 3Ε" },
                                 { name: "Συντήρηση Κηποτεχνικών Εφαρμογών", hours: 5, hoursBreakdown: "2Θ + 3Ε" },
                             ]
                         },
@@ -1399,10 +1399,12 @@ export const protypoEPALData = {
                             subjects: [
                                 { name: "Αρχές Οικονομικής Θεωρίας", hours: 3, hoursBreakdown: "3Θ" },
                                 { name: "Αρχές Οργάνωσης και Διοίκησης", hours: 3, hoursBreakdown: "3Θ" },
-                                { name: "Σύγχρονο Περιβάλλον Γραφείου", hours: 4, hoursBreakdown: "2Θ + 2Ε" },
-                                { name: "Φορολογική Πρακτική", hours: 6, hoursBreakdown: "2Θ + 4Ε" },
-                                { name: "Λογιστικές Εφαρμογές", hours: 5, hoursBreakdown: "5Ε" },
+                                { name: "Σύγχρονο Περιβάλλον Γραφείου", hours: 2, hoursBreakdown: "1Θ + 1Ε" },
+                                { name: "Εισαγωγή στην Οργανωσιακή Συμπεριφορά και στη Διοίκηση Ανθρώπινων Πόρων", hours: 2, hoursBreakdown: "2Θ" },
+                                { name: "Πληροφοριακά Συστήματα Διοίκησης", hours: 2, hoursBreakdown: "1Θ + 1Ε" },
                                 { name: "Επικοινωνία και Δημόσιες Σχέσεις", hours: 2, hoursBreakdown: "2Θ" },
+                                { name: "Φορολογική Πρακτική", hours: 6, hoursBreakdown: "2Θ + 4Ε" },
+                                { name: "Λογιστικές Εφαρμογές", hours: 3, hoursBreakdown: "3Ε" },
                             ]
                         },
                         {
@@ -1413,7 +1415,7 @@ export const protypoEPALData = {
                                 { name: "Οργάνωση και Λειτουργία Τουριστικών Επιχειρήσεων", hours: 4, hoursBreakdown: "2Θ + 2Ε" },
                                 { name: "Οργάνωση και Λειτουργία Ξενοδοχειακών Επιχειρήσεων", hours: 4, hoursBreakdown: "2Θ + 2Ε" },
                                 { name: "Γεωγραφία Τουρισμού", hours: 2, hoursBreakdown: "2Ε" },
-                                { name: "Εφαρμογές στον Τουρισμό", hours: 3, hoursBreakdown: "3Ε" },
+                                { name: "Τουριστικό Μάρκετινγκ - Εξυπηρέτηση Πελατών", hours: 3, hoursBreakdown: "2Θ + 1Ε" },
                                 { name: "Αγγλικά Ειδικότητας", hours: 2, hoursBreakdown: "2Θ" },
                                 { name: "Γαλλικά / Γερμανικά / Ισπανικά / Ιταλικά", hours: 2, hoursBreakdown: "2Θ" },
                             ]
@@ -1423,11 +1425,12 @@ export const protypoEPALData = {
                             subjects: [
                                 { name: "Αρχές Οικονομικής Θεωρίας", hours: 3, hoursBreakdown: "3Θ" },
                                 { name: "Αρχές Οργάνωσης και Διοίκησης", hours: 3, hoursBreakdown: "3Θ" },
-                                { name: "Σύγχρονο Περιβάλλον Γραφείου", hours: 4, hoursBreakdown: "2Θ + 2Ε" },
-                                { name: "Διαφήμιση (Εισαγωγή, Δημιουργία και Προβολή)", hours: 6, hoursBreakdown: "2Θ + 4Ε" },
-                                { name: "Επικοινωνία και Δημόσιες Σχέσεις", hours: 2, hoursBreakdown: "2Θ" },
-                                { name: "Εφαρμογές Μάρκετινγκ", hours: 3, hoursBreakdown: "3Ε" },
                                 { name: "Λογιστικές Εφαρμογές", hours: 2, hoursBreakdown: "2Ε" },
+                                { name: "Διαφήμιση (Εισαγωγή, Δημιουργία και προβολή)", hours: 6, hoursBreakdown: "2Θ + 4Ε" },
+                                { name: "Ψηφιακό Μάρκετινγ", hours: 3, hoursBreakdown: "1Θ + 2Ε" },
+                                { name: "Επικοινωνία και Δημόσιες Σχέσεις", hours: 2, hoursBreakdown: "2Θ" },
+                                { name: "Στρατηγικό Μάρκετινγκ", hours: 2, hoursBreakdown: "2Θ" },
+                                { name: "Εφαρμογές Μάρκετινγκ", hours: 2, hoursBreakdown: "2Ε" },
                             ]
                         },
                         {
@@ -1437,8 +1440,9 @@ export const protypoEPALData = {
                                 { name: "Αρχές Οργάνωσης και Διοίκησης", hours: 3, hoursBreakdown: "3Θ" },
                                 { name: "Οργάνωση και Διαχείριση Αποθηκών", hours: 5, hoursBreakdown: "3Θ + 2Ε" },
                                 { name: "Οργάνωση και Διαχείριση Μεταφορών", hours: 4, hoursBreakdown: "2Θ + 2Ε" },
-                                { name: "Εφαρμογές Εφοδιαστικής", hours: 6, hoursBreakdown: "3Θ + 3Ε" },
-                                { name: "Λογιστικές Εφαρμογές", hours: 2, hoursBreakdown: "2Ε" },
+                                { name: "Εφαρμογές Εφοδιαστικής (Logistics)", hours: 3, hoursBreakdown: "3Ε" },
+                                { name: "Λογιστική Κόστους", hours: 3, hoursBreakdown: "2Θ  + 1Ε" },
+                                { name: "Διοίκηση Έργων (Project Management)", hours: 2, hoursBreakdown: "2Ε" },
                             ]
                         },
                     ],
@@ -1449,12 +1453,13 @@ export const protypoEPALData = {
                         {
                             name: "Τεχνικός Δομικών Έργων και Γεωπληροφορικής",
                             subjects: [
-                                { name: "Αρχιτεκτονικό Σχέδιο", hours: 4, hoursBreakdown: "4Σ" },
+                                { name: "Αρχιτεκτονικό Σχέδιο", hours: 4, hoursBreakdown: "4Ε" },
                                 { name: "Οικοδομική", hours: 3, hoursBreakdown: "3Θ" },
                                 { name: "Σχέδιο Πολιτικού Μηχανικού και Έργων Υποδομής", hours: 3, hoursBreakdown: "1Θ + 2Ε" },
-                                { name: "Εφαρμογές Γεωπληροφορικής στα Τεχνικά Έργα", hours: 5, hoursBreakdown: "5Ε" },
+                                { name: "Εφαρμογές Γεωπληροφορικής στα Τεχνικά Έργα", hours: 3, hoursBreakdown: "3Ε" },
                                 { name: "Οργάνωση Τεχνικών Έργων", hours: 4, hoursBreakdown: "2Θ + 2Ε" },
-                                { name: "Σχέδιο Δομικών Έργων με χρήση Η/Υ ΙΙ", hours: 4, hoursBreakdown: "4Ε" },
+                                { name: "Ηλεκτρονική Σχεδίαση Δομικών Έργων", hours: 4, hoursBreakdown: "4Ε" },
+                                { name: "Δόμηση και Βιώσιμη Ανάπτυξη - Κλιματική Αλλαγή ", hours: 2, hoursBreakdown: "2Ε" },
                             ]
                         },
                     ],
@@ -1467,11 +1472,10 @@ export const protypoEPALData = {
                             subjects: [
                                 { name: "Ιστορία Σύγχρονης Τέχνης", hours: 3, hoursBreakdown: "3Θ" },
                                 { name: "Τεχνολογία Υλικών", hours: 2, hoursBreakdown: "2Θ" },
-                                { name: "Ελεύθερο Σχέδιο - Χρώμα", hours: 3, hoursBreakdown: "3Ε" },
-                                { name: "Γραφιστικές Εφαρμογές", hours: 4, hoursBreakdown: "4Ε" },
+                                { name: "Οργάνωση Παραγωγής Γραφικών Τεχνών - Προεκτύπωση", hours: 5, hoursBreakdown: "5Ε" },
                                 { name: "Τεχνολογία Εκτυπώσεων", hours: 4, hoursBreakdown: "1Θ + 3Ε" },
-                                { name: "Ψηφιακή Σχεδίαση Εντύπων", hours: 4, hoursBreakdown: "4Ε" },
-                                { name: "Γραμματογραφία", hours: 2, hoursBreakdown: "2Ε" },
+                                { name: "Ψηφιακή Σχεδίαση Εντύπων - Ηλεκτρονικών Εντύπωνν", hours: 4, hoursBreakdown: "1Θ + 3Ε" },
+                                { name: "Σχεδιασμός Οπτικής Επικοινωνίας στην Ειδικότητα", hours: 4, hoursBreakdown: "1Θ + 3Ε" },
                                 { name: "Αγγλικά Ειδικότητας", hours: 1, hoursBreakdown: "1Θ" },
                             ]
                         },
@@ -1480,10 +1484,12 @@ export const protypoEPALData = {
                             subjects: [
                                 { name: "Ιστορία Σύγχρονης Τέχνης", hours: 3, hoursBreakdown: "3Θ" },
                                 { name: "Τεχνολογία Υλικών", hours: 2, hoursBreakdown: "2Θ" },
-                                { name: "Εργαστήριο Χειροποίητου Κοσμήματος", hours: 9, hoursBreakdown: "9Ε" },
+                                { name: "Εργαστήριο Χειροποίητου Κοσμήματος", hours: 5, hoursBreakdown: "5Ε" },
                                 { name: "Εργαστήριο Αναπαραγωγικού Κοσμήματος - Σμάλτο", hours: 3, hoursBreakdown: "3Ε" },
-                                { name: "Σχέδιο Κοσμηματοποιΐας", hours: 3, hoursBreakdown: "3Σ" },
+                                { name: "Σχέδιο Κοσμηματοποιΐας", hours: 3, hoursBreakdown: "3Ε" },
                                 { name: "Εργαστήριο Πλαστικής - Μεταλλοπλαστικής", hours: 3, hoursBreakdown: "3Ε" },
+                                { name: "Σύγχρονο-Εικαστικό Κόσμημα", hours: 2, hoursBreakdown: "2Ε" },
+                                { name: "Ψηφιακή Τεχνολογία στο Κόσμημα", hours: 2, hoursBreakdown: "2Ε" },
                             ]
                         },
                         {
@@ -1491,10 +1497,11 @@ export const protypoEPALData = {
                             subjects: [
                                 { name: "Ιστορία Σύγχρονης Τέχνης", hours: 3, hoursBreakdown: "3Θ" },
                                 { name: "Τεχνολογία Υλικών", hours: 2, hoursBreakdown: "2Θ" },
-                                { name: "Βασικές Τεχνικές Συντήρησης Έργων Τέχνης", hours: 7, hoursBreakdown: "7Ε" },
                                 { name: "Προστασία Πολιτιστικής Κληρονομιάς", hours: 2, hoursBreakdown: "2Θ" },
-                                { name: "Αντίγραφο Έργων Τέχνης", hours: 5, hoursBreakdown: "5Ε" },
-                                { name: "Σχεδιαστική Τεκμηρίωση Έργων Τέχνης", hours: 3, hoursBreakdown: "3Ε" },
+                                { name: "Υλικά και Τεχνικές Κατασκευής Έργων Τέχνης - Αντίγραφο", hours: 4, hoursBreakdown: "4Ε" },
+                                { name: "Τεκμηρίωση Έργων Πολιτιστικής Κληρονομιάς", hours: 3, hoursBreakdown: "3Ε" },
+                                { name: "Γενικές Αρχές Συντήρησης Αρχαιοτήτων", hours: 4, hoursBreakdown: "4Ε" },
+                                { name: "Γενικές Αρχές Συντήρησης Έργων Τέχνης", hours: 4, hoursBreakdown: "4Ε" },
                                 { name: "Αγγλικά Ειδικότητας", hours: 1, hoursBreakdown: "1Θ" },
                             ]
                         },
@@ -1503,11 +1510,12 @@ export const protypoEPALData = {
                             subjects: [
                                 { name: "Ιστορία Σύγχρονης Τέχνης", hours: 3, hoursBreakdown: "3Θ" },
                                 { name: "Τεχνολογία Υλικών", hours: 2, hoursBreakdown: "2Θ" },
-                                { name: "Τεχνολογία Προτύπων Κοπής (Πατρόν)", hours: 5, hoursBreakdown: "5Ε" },
-                                { name: "Ηλεκτρονική Σχεδίαση Βιομηχανικού Προϊόντος", hours: 3, hoursBreakdown: "3Ε" },
+                                { name: "Σχεδιασμός και Τεχνολογία Προτύπων Ενδύματος", hours: 3, hoursBreakdown: "3Ε" },
+                                { name: "Ηλεκτρονικά Συστήματα Σχεδιασμού Προτύπων", hours: 3, hoursBreakdown: "3Ε" },
                                 { name: "Τεχνολογία Υφάσματος και Οργάνωση Συλλογής Ενδύματος", hours: 3, hoursBreakdown: "3Θ" },
                                 { name: "Ποιοτικός Έλεγχος Υφάσματος", hours: 3, hoursBreakdown: "1Θ + 2Ε" },
-                                { name: "Τεχνολογία Παραγωγής Ενδυμάτων", hours: 4, hoursBreakdown: "4Ε" },
+                                { name: "Αρχές Κατασκευής Ενδυμάτων", hours: 5, hoursBreakdown: "5Ε" },
+                                { name: "Υφασματολογία - Τεχνολογία Ινών", hours: 1, hoursBreakdown: "1Θ" },
                             ]
                         },
                         {
@@ -1515,11 +1523,11 @@ export const protypoEPALData = {
                             subjects: [
                                 { name: "Ιστορία Σύγχρονης Τέχνης", hours: 3, hoursBreakdown: "3Θ" },
                                 { name: "Τεχνολογία Υλικών", hours: 2, hoursBreakdown: "2Θ" },
-                                { name: "Ελεύθερο Σχέδιο – Χρώμα", hours: 3, hoursBreakdown: "3Ε" },
-                                { name: "Ψηφιακή Σχεδίαση", hours: 3, hoursBreakdown: "3Ε" },
-                                { name: "Διακόσμηση Εσωτερικών Χώρων", hours: 4, hoursBreakdown: "4Ε" },
-                                { name: "Διακοσμητική Σύνθεση – Τρισδιάστατη Μακέτα", hours: 6, hoursBreakdown: "6Ε" },
-                                { name: "Αγγλικά Ειδικότητας", hours: 2, hoursBreakdown: "2Θ" },
+                                { name: "Ψηφιακός Σχεδιασμός Χώρου", hours: 3, hoursBreakdown: "3Ε" },
+                                { name: "Αρχιτεκτονικός Σχεδιασμός Χώρου", hours: 4, hoursBreakdown: "4Ε" },
+                                { name: "Διακοσμητική Σύνθεση – Τρισδιάστατη Μακέτα", hours: 5, hoursBreakdown: "1Θ + 5Ε" },
+                                { name: "Αειφορικός - Βιοκλιματικός Σχεδιασμός Χώρου", hours: 4, hoursBreakdown: "4Ε" },
+                                { name: "Αγγλικά Ειδικότητας", hours: 1, hoursBreakdown: "1Θ" },
                             ]
                         },
                         {
@@ -1527,11 +1535,11 @@ export const protypoEPALData = {
                             subjects: [
                                 { name: "Ιστορία Σύγχρονης Τέχνης", hours: 3, hoursBreakdown: "3Θ" },
                                 { name: "Τεχνολογία Υλικών", hours: 2, hoursBreakdown: "2Θ" },
-                                { name: "Ξύλινες Κατασκευές", hours: 6, hoursBreakdown: "1Θ + 5Ε" },
-                                { name: "Συνδεσμολογία Επίπλου - Ξυλογλυπτική", hours: 6, hoursBreakdown: "1Θ + 5Ε" },
+                                { name: "Κατασκευές με ξύλο - Εισαγωγή στην επιπλοποιία & ξυλογλυπτική", hours: 5, hoursBreakdown: "5Ε" },
+                                { name: "Συνδεσμολογία Επίπλου", hours: 5, hoursBreakdown: "5Ε" },
                                 { name: "Τεχνολογία Ξύλου - Μετρήσεις", hours: 2, hoursBreakdown: "2Θ" },
-                                { name: "Γραμμικό Σχέδιο", hours: 2, hoursBreakdown: "2Σ" },
-                                { name: "Ελεύθερο Σχέδιο", hours: 2, hoursBreakdown: "2Σ" },
+                                { name: "Γραμμικό Σχέδιο", hours: 2, hoursBreakdown: "2E" },
+                                { name: "Ψηφιακός Σχεδιασμός CAD/CAM", hours: 4, hoursBreakdown: "1Θ + 3Ε" },
                             ]
                         },
                     ],
@@ -1622,6 +1630,35 @@ export const protypoEPALData = {
                         },
                     ],
                 },
+                maritime: {
+                    name: "Ναυτιλιακών Επαγγελμάτων",
+                    specialties: [
+                        {
+                            name: "Πλοίαρχος Εμπορικού Ναυτικού",
+                            subjects: [
+                                { name: "Ναυσιπλοΐα ΙI", hours: 3, hoursBreakdown: "3Θ" },
+                                { name: "Ναυτικό Δίκαιο - Διεθνείς Κανονισμοί στην Ναυτιλία - Εφαρμογές", hours: 3, hoursBreakdown: "3Θ" },
+                                { name: "Μεταφορά Φορτίων", hours: 3, hoursBreakdown: "3Θ" },
+                                { name: "Τήρηση Φυλακής Γέφυρας", hours: 2, hoursBreakdown: "2Θ" },
+                                { name: "Ναυτικά Αγγλικά ΙΙ", hours: 2, hoursBreakdown: "2Θ" },
+                                { name: "Ν.Η.Ο. - Επικοινωνίες", hours: 5, hoursBreakdown: "2Θ + 3Ε" },
+                                { name: "Εφαρμογές Δ.Κ.Α.Σ. - ECDIS - ARPA", hours: 5, hoursBreakdown: "5Ε" }
+                            ]
+                        },
+                        {
+                            name: "Μηχανικός Εμπορικού Ναυτικού",
+                            subjects: [
+                                { name: "Ναυτικές Μηχανές", hours: 3, hoursBreakdown: "3Θ" },
+                                { name: "Ναυτικό Δίκαιο - Διεθνείς Κανονισμοί στη Ναυτιλία - Εφαρμογές", hours: 3, hoursBreakdown: "3Θ" },
+                                { name: "Βοηθητικές Εγκαταστάσεις Πλοίου", hours: 6, hoursBreakdown: "3Θ + 3Ε" },
+                                { name: "Ηλεκτρικές Εγκαταστάσεις Πλοίου ΙΙ", hours: 2, hoursBreakdown: "2Θ" },
+                                { name: "Ναυτικά Αγγλικά II", hours: 2, hoursBreakdown: "2Θ" },
+                                { name: "Μηχανολογικές Κατασκευές Πλοίου - Σχέδιο με Η/Υ", hours: 5, hoursBreakdown: "5Ε" },
+                                { name: "Τήρηση Φυλακής Μηχανοστασίου", hours: 2, hoursBreakdown: "2Θ" }
+                            ]
+                        },
+                    ],
+                },
                 computer_science: {
                     name: "Πληροφορικής",
                     specialties: [
@@ -1686,7 +1723,7 @@ export const protypoEPALData = {
                                 { name: "Παιδαγωγικό Περιβάλλον Βρεφονηπιακού Σταθμού", hours: 4, hoursBreakdown: "4Ε" },
                                 { name: "Αγωγή Βρέφους και Νηπίου", hours: 4, hoursBreakdown: "2Θ + 2Ε" },
                                 { name: "Στοιχεία Γενικής και Εξελικτικής Ψυχολογίας", hours: 2, hoursBreakdown: "2Θ" },
-                                { name: "Δημιουργική Απασχόληση στην Προσχολική Ηλικία ΙΙ", hours: 4, hoursBreakdown: "4Ε" },
+                                { name: "Δημιουργία και Έκφραση στην Προσχολική Ηλικία ΙΙ", hours: 4, hoursBreakdown: "4Ε" },
                                 { name: "Μουσικοκινητική Αγωγή", hours: 2, hoursBreakdown: "2Ε" },
                                 { name: "Λογοτεχνία Προσχολικής Ηλικίας", hours: 2, hoursBreakdown: "2Θ" },
                             ]
@@ -1709,9 +1746,9 @@ export const protypoEPALData = {
                                 { name: "Ανατομία - Φυσιολογία ΙΙ", hours: 3, hoursBreakdown: "3Θ" },
                                 { name: "Υγιεινή", hours: 2, hoursBreakdown: "2Θ" },
                                 { name: "Οργάνωση, Εξοπλισμός και Υλικά Οδοντοτεχνικού Εργαστηρίου", hours: 2, hoursBreakdown: "2Θ" },
-                                { name: "Οδοντοτεχνία ΙΙ", hours: 3, hoursBreakdown: "1Θ + 2Ε" },
+                                { name: "Οδοντοτεχνία ΙΙ", hours: 4, hoursBreakdown: "2Θ + 2Ε" },
                                 { name: "Ακίνητη Προσθετική", hours: 4, hoursBreakdown: "1Θ + 3Ε" },
-                                { name: "Ακίνητη Προσθετική και Πορσελάνη", hours: 6, hoursBreakdown: "2Θ + 4Ε" },
+                                { name: "Ακίνητη Προσθετική και Πορσελάνη", hours: 5, hoursBreakdown: "1Θ + 4Ε" },
                                 { name: "Στοιχεία Ορθοδοντικής", hours: 3, hoursBreakdown: "1Θ + 2Ε" },
                             ]
                         },
@@ -1732,11 +1769,11 @@ export const protypoEPALData = {
                             subjects: [
                                 { name: "Ανατομία - Φυσιολογία ΙΙ", hours: 3, hoursBreakdown: "3Θ" },
                                 { name: "Υγιεινή", hours: 2, hoursBreakdown: "2Θ" },
-                                { name: "Συνταγολογία, Νομοθεσία και Βιβλία Φαρμακείου", hours: 2, hoursBreakdown: "2Θ" },
+                                { name: "Συνταγολογία, Νομοθεσία και Βιβλία Φαρμακείου", hours: 3, hoursBreakdown: "3Θ" },
                                 { name: "Φαρμακευτική Τεχνολογία ΙΙ", hours: 3, hoursBreakdown: "1Θ + 2Ε" },
                                 { name: "Κοσμητολογία", hours: 3, hoursBreakdown: "1Θ + 2Ε" },
                                 { name: "Στοιχεία Φαρμακογνωσίας", hours: 4, hoursBreakdown: "2Θ + 2Ε" },
-                                { name: "Φαρμακολογία - Τοξικολογία", hours: 6, hoursBreakdown: "6Θ" },
+                                { name: "Φαρμακολογία - Τοξικολογία", hours: 5, hoursBreakdown: "5Θ" },
                             ]
                         },
                         {

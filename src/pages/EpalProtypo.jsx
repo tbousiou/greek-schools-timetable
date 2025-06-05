@@ -113,7 +113,6 @@ export default function EpalProtypo() {
 
       {activeTab === 'C' && (
         <section>
-          <p className='text-xl text-red-600 mb-2'>TODO</p>
           <h2 className="text-xl font-semibold mb-4">Μαθήματα Γενικής Παιδείας Γ' Τάξης</h2>
           <div className="overflow-x-auto mb-4">
             <ClassTable data={protypoEPALData.classC.subjects.core} />
