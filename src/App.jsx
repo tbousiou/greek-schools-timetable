@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, createHashRouter, RouterProvider } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home'
 
@@ -26,7 +26,9 @@ import LykeioMousiko from './pages/LykeioMousiko'
 import GymnasioKallitexniko from './pages/GymnasioKallitexniko'
 import LykeioKallitexniko from './pages/LykeioKallitexniko'
 
-const router = createBrowserRouter([
+// Replace createBrowserRouter with createHashRouter
+// const router = createBrowserRouter([
+const router = createHashRouter([
   { path: '/',
     element: <Layout />,
     children: [
